@@ -1,0 +1,26 @@
+@import 'typography';
+@import 'variables';
+
+body {
+  background: $blue;
+
+  .home {
+    display: flex;
+
+    .home-page-content-1 {
+      .btn {
+        background: $orange;
+        padding: 1rem 2rem;
+        border-radius: 40px;
+      }
+    }
+
+    .home-page-content-2 {
+      display: flex;
+      .home-page-content-img {
+        width: 10rem;
+        height: 100%;
+      }
+    }
+  }
+}
