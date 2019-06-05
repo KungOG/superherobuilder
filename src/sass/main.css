@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Skranji:400,700&display=swap");
+body {
+  background: #00AEED;
+}
+
+body #app .home h1 {
+  font-family: 'Skranji', cursive;
+}
+/*# sourceMappingURL=main.css.map */
