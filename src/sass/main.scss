@@ -1,12 +1,15 @@
+@import 'typography';
+@import 'variables';
+
 body {
-  background: #00aeed;
+  background: $blue;
 
   .home {
     display: flex;
 
     .home-page-content-1 {
       .btn {
-        background: #e54626;
+        background: $orange;
         padding: 1rem 2rem;
         border-radius: 40px;
       }

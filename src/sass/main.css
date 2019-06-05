@@ -1,5 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Skranji:400,700&display=swap");
+h1, h2 {
+  font-family: 'Skranji', cursive;
+}
+
 body {
-  background: #00aeed;
+  background: #00AEED;
 }
 
 body .home {
@@ -9,7 +14,7 @@ body .home {
 }
 
 body .home .home-page-content-1 .btn {
-  background: #e54626;
+  background: #E54626;
   padding: 1rem 2rem;
   border-radius: 40px;
 }
