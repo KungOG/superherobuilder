@@ -41,7 +41,7 @@ html, body {
 
     .home {
       display: flex;
-      margin: 2rem;
+      padding: 2rem;
     .home-page-content-1 {
       display: flex;
       flex-direction: column;
@@ -65,18 +65,27 @@ html, body {
     }
     
     .home-page-content-2 {
-      flex:2;
       @extend%center;
 
       .home-page-content-img {
-        width: 8rem;
-        height: 10rem;
+        position: relative;
+        width: 10rem;
+        height: 14rem;
         opacity: .2;
+        left: 40px;
         &:nth-child(2)  {
+          left: 0px;
+          position: relative;
           opacity: 1;
           width: 12rem;
+          height: 18rem;
+        }
+          &:nth-last-child(1)  {
+          position: relative;
+          width: 10rem;
           height: 14rem;
-
+          opacity: .2;
+          left: -40px;
         }
       }
     }
