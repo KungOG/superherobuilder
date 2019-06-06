@@ -1,26 +1,81 @@
 @import 'typography';
 @import 'variables';
+html, body {
+  background: lightgrey;
+  margin-top: 0;
 
-body {
-  background: $blue;
 
-  .home {
-    display: flex;
+   #app {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    background: $blue;
+    @extend%center;
+    #nav {
+      background: rgba(83, 150, 196, 0.295);
+      position: absolute;
+      top: 0;
+      @extend%center;
+      #login {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background: red;
+        padding: .75rem 1.1rem;
+        border-radius: 15px 0 0 15px;
+      }
+      .red-bar {
+        position: absolute;
+        top: 0;
+        padding: 0rem;
+        height: 5rem;
+        width: 300px;
+        background: red;
+        border-radius: 0 0 35px 35px;
+      }
+    }
 
+    .home {
+      display: flex;
+      margin: 2rem;
     .home-page-content-1 {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      h1 {
+        font-size: 2.1rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        margin: 0rem 0 3rem 0;
+        font-size: 1.2rem;
+      }
+  
       .btn {
         background: $orange;
         padding: 1rem 2rem;
         border-radius: 40px;
+        text-decoration: none;
+        color: black;
       }
     }
-
+    
     .home-page-content-2 {
-      display: flex;
+      flex:2;
+      @extend%center;
+
       .home-page-content-img {
-        width: 10rem;
-        height: 100%;
+        width: 8rem;
+        height: 10rem;
+        opacity: .2;
+        &:nth-child(2)  {
+          opacity: 1;
+          width: 12rem;
+          height: 14rem;
+
+        }
       }
     }
   }
+}
 }
