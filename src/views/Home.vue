@@ -2,7 +2,7 @@
   <main class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <h1>Hej hej</h1>
-    <button class="btn">Start</button>
+    <a class="btn">Start</a>
   </main>
 </template>
 
