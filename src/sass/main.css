@@ -1,6 +1,42 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Skranji:400,700&display=swap");
-h1, h2 {
+h1, h2, h3, h4, h5, h6, label {
   font-family: 'Skranji', cursive;
+}
+
+body #app .about form .contact input, body #app .about form .contact textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn {
+  background: #E54626;
+  border: none;
+  border-radius: 9999rem;
+  color: black;
+  cursor: pointer;
+  font-family: 'Skranji', cursive;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+.btn:hover {
+  color: #fffdfd;
+}
+
+.btn span {
+  font-weight: 700;
 }
 
 body {
@@ -28,5 +64,39 @@ body .home .home-page-content-2 {
 body .home .home-page-content-2 .home-page-content-img {
   width: 10rem;
   height: 100%;
+}
+
+body #app .about form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body #app .about form .contact {
+  background: #E54626;
+  border: 1px solid black;
+  width: 30rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+body #app .about form .contact label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #app .about form .contact input, body #app .about form .contact textarea {
+  width: 20rem;
 }
 /*# sourceMappingURL=main.css.map */

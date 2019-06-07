@@ -1,8 +1,6 @@
 @import 'typography';
 @import 'variables';
-html, body {
-  background: lightgrey;
-  margin-top: 0;
+@import 'components';
 
 
    #app {
@@ -88,7 +86,37 @@ html, body {
           left: -40px;
         }
       }
+
+      
     }
   }
+  .about {
+
+      form {
+          display: flex;
+          flex-direction: column;
+
+          .contact {
+              background: $orange;
+              border: 1px solid black;
+              width: 30rem;
+              margin: 0 auto;
+              padding: 1rem;
+
+              label {
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-start;
+              }
+
+              input, textarea {
+                  width: 20rem;
+                  @extend %center;
+              }
+
+          }
+      }
+
+  }
 }
-}
+
