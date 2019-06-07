@@ -15,8 +15,11 @@ body {
       background: rgba(83, 150, 196, 0.295);
       position: absolute;
       top: 0;
+      height: 5rem;
+      width: 800px;
       @extend%center;
       #login {
+        text-align: right;
         position: absolute;
         right: 0px;
         top: 10px;

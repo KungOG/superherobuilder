@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      
-        <p id="login">Login</p> 
-     
+         <span>
+      <p id="login">Login</p>
+        </span>
       <div class="red-bar">
         <h1>SUPERHEROS</h1>
         <!-- -->
