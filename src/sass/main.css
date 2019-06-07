@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Skranji:400,700&display=swap");
+h1, h2 {
+  font-family: 'Skranji', cursive;
+}
+
+body {
+  background: #00AEED;
+}
+
+body .home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .home .home-page-content-1 .btn {
+  background: #E54626;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+}
+
+body .home .home-page-content-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .home .home-page-content-2 .home-page-content-img {
+  width: 10rem;
+  height: 100%;
+}
+/*# sourceMappingURL=main.css.map */
