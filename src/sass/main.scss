@@ -2,6 +2,8 @@
 @import 'variables';
 @import 'components';
 
+body {
+  margin: 0;
 
    #app {
     width: 800px;
@@ -34,6 +36,8 @@
         width: 300px;
         background: $orange;
         border-radius: 0 0 35px 35px;
+
+        text-align: center;
       }
     }
 
@@ -120,3 +124,4 @@
   }
 }
 
+}
