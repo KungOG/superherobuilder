@@ -1,10 +1,11 @@
 {
     "version": 3,
-    "mappings": "ACAA,OAAO,CAAC,0FAAI;ADGZ,AAAA,IAAI,CAAC;EACD,UAAU,EEHP,OAAO;CFgBb;;AAdD,AAOY,IAPR,CAGA,IAAI,CAEA,KAAK,CAED,EAAE,CAAC;EACC,WAAW,EAAE,kBAAkB;CAClC",
+    "mappings": "ACAA,OAAO,CAAC,0FAAI;AECZ,AAAA,IAAI,CAAC;EACD,UAAU,EDAL,OAAO;ECCZ,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,OAAO;EACtB,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,kBAAkB;EAC/B,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,MAAM;EACjB,OAAO,EAAE,SAAS;EAClB,cAAc,EAAE,SAAS;CAC5B;;AHPD,AAAA,IAAI,CAAC;EACD,UAAU,EEJP,OAAO;CFiBb;;AAdD,AAOY,IAPR,CAGA,IAAI,CAEA,KAAK,CAED,EAAE,CAAC;EACC,WAAW,EAAE,kBAAkB;CAClC",
     "sources": [
         "main.scss",
         "_typography.scss",
-        "_variables.scss"
+        "_variables.scss",
+        "_components.scss"
     ],
     "names": [],
     "file": "main.css"

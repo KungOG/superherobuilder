@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Skranji:400,700&display=swap");
+.btn {
+  background: #E54626;
+  border: none;
+  border-radius: 9999rem;
+  color: black;
+  font-family: 'Skranji', cursive;
+  font-weight: 400;
+  font-size: 2.3rem;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+}
+
 body {
   background: #00AEED;
 }
