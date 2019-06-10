@@ -96,6 +96,7 @@ body {
   position: relative;
   animation: first 12s infinite;
   animation-delay: 4s;
+  animation-timing-function: ease-in-out;
 }
 .a img {
   width: 150px;
@@ -105,7 +106,7 @@ body {
   position: relative;
   animation: secund 12s infinite;
   animation-delay: 8s;
-  
+  animation-timing-function: ease-in-out;
 }
 .b img {
   width: 150px;
@@ -115,6 +116,7 @@ body {
   position: relative;
   animation: third 12s infinite;
   animation-delay: 12s;
+  animation-timing-function: ease-in-out;
 }
 .c img {
   width: 150px;
