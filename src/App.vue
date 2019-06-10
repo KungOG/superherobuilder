@@ -5,7 +5,7 @@
       <p id="login">Login</p>
         </span>
       <div class="red-bar">
-        <h1>SUPERHEROS</h1>
+        <h1>SUPERHEROES</h1>
         <!-- -->
         <router-link to="/">Home</router-link> |
         <router-link to="/builder">builder</router-link> | 
