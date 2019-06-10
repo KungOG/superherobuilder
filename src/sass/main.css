@@ -1,9 +1,10 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Skranji:400,700&display=swap");
 h1, h2, h3, h4, h5, h6, label {
   font-family: 'Skranji', cursive;
 }
 
-body #app .home .home-page-content-2 {
+body #app #nav .red-bar, body #app .home .home-page-content-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,6 +38,81 @@ body #app .home .home-page-content-2 {
 
 .btn span {
   font-weight: 700;
+}
+
+/* Hamburgar knappen */
+#slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Krysset inne i menyn */
+  /* Krysset och dess färg */
+  /* Storlek på krysset */
+  /* Var hela menyn ska vara och ligga */
+  /* När fliken är ute, så blir det andra den här färgen */
+}
+
+#slide .bm-burger-button {
+  width: 2rem;
+  height: 2rem;
+  left: 1rem;
+  top: 1.5rem;
+  cursor: pointer;
+  /* Strecken för hamburgar menyn */
+  /* Linjerna för menyn */
+}
+
+#slide .bm-burger-button .bm-burger-bars {
+  background-color: black;
+}
+
+#slide .bm-burger-button .line-style {
+  position: absolute;
+  height: 20%;
+  left: 0;
+  right: 0;
+}
+
+#slide .cross-style {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+#slide .bm-cross {
+  background: white;
+}
+
+#slide .bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+#slide .bm-menu {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1000;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #3f3f41;
+  /* Black */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /*0.5 second transition effect to slide in the sidenav*/
+}
+
+#slide .bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .about {
@@ -221,27 +297,35 @@ body {
 
 body #app {
   height: 100vh;
-  margin: 0 auto;
   background: #00AEED;
 }
 
 body #app #nav {
   background: rgba(83, 150, 196, 0.295);
-  top: 0;
   height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #app #nav .red-bar {
+  padding: .5rem;
+  margin: 0;
+  height: 5rem;
+  background: #E54626;
+  border-radius: 0 0 35px 35px;
+}
+
+body #app #nav #login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-body #app #nav #login {
-  text-align: right;
   background: #E54626;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -249,14 +333,6 @@ body #app #nav #login {
   text-transform: uppercase;
   padding: 0.4rem 1.1rem;
   border-radius: 15px 0 0 15px;
-}
-
-body #app #nav .red-bar {
-  padding: .5rem;
-  height: 5rem;
-  background: #E54626;
-  border-radius: 0 0 35px 35px;
-  text-align: center;
 }
 
 body #app .home {
