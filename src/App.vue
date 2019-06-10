@@ -1,23 +1,31 @@
 <template>
   <div id="app">
     <div id="nav">
-         <span>
-      <p id="login">Login</p>
-        </span>
-      <div class="red-bar">
-        <h1>SUPERHEROES</h1>
-        <!-- -->
-        <router-link to="/">Home</router-link> |
-        <router-link to="/builder">builder</router-link> | 
-        <router-link to="/power">power</router-link> | 
-        <router-link to="/contact">contact</router-link> |
-        <router-link to="/profile">profile</router-link>
-        <!-- -->
+      <Slide>
+        <router-link to="/">Home</router-link>
+        <router-link to="/builder">Builder</router-link>
+        <router-link to="/power">Power</router-link> 
+        <router-link to="/contact">Contact</router-link> 
+        <router-link to="/profile">Profile</router-link>
+      </Slide>
+       <div class="red-bar">
+          <h1>SUPERHEROES</h1>
       </div>
+        <p id="login">Login</p>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+import { Slide } from 'vue-burger-menu'
+export default {
+  name: 'app',
+  components : {
+    Slide
+  }
+}
+</script>
 
 
 <style lang="scss">
