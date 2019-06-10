@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>Contact us</h1>
-    <p>Sometimes even superheroes wonder about something. <br>
+    <p class="msg">Sometimes even superheroes wonder about something.
        Send a message to your favourite superhero community using the form below.</p>
     
     <form>
@@ -13,12 +13,11 @@
         <label>Phone (optional)</label>
         <input type="number">
         <label>Message</label>
-        <textarea rows="4" col="50"></textarea>
+        <textarea rows="12" col="50"></textarea>
       </div>
       <br>
       <button type="button" class="btn">
-          Send
-          <span>&gt;</span>
+        Send 
       </button>
     </form>
 

@@ -12,10 +12,12 @@
         <div class="build-page-content-1-div">
             <p class="build-page-content-1-text">BODY </p>
         </div>
-      <a class="btn">
-        Step two
-        <span>&gt;</span>
-      </a>
+        <a class="btn">
+            <router-link to="/power">
+                Step two
+                <span>&gt;</span>
+            </router-link>
+        </a>
     </section>
     <section class="build-page-content-2">
         <div class="build-page-content-2-img-container">
