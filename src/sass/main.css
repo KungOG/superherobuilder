@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6, label {
   font-family: 'Skranji', cursive;
 }
 
-body #app #nav .red-bar, body #app .home .home-page-content-2 {
+body #app #nav .red-bar, body #app #nav #login, body #app .home .home-page-content-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,16 +40,15 @@ body #app #nav .red-bar, body #app .home .home-page-content-2 {
   font-weight: 700;
 }
 
-/* Hamburgar knappen */
 #slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* Hamburgar knappen */
   /* Krysset inne i menyn */
   /* Krysset och dess färg */
   /* Storlek på krysset */
   /* Var hela menyn ska vara och ligga */
-  /* När fliken är ute, så blir det andra den här färgen */
 }
 
 #slide .bm-burger-button {
@@ -63,7 +62,7 @@ body #app #nav .red-bar, body #app .home .home-page-content-2 {
 }
 
 #slide .bm-burger-button .bm-burger-bars {
-  background-color: black;
+  background-color: white;
 }
 
 #slide .bm-burger-button .line-style {
@@ -100,7 +99,7 @@ body #app #nav .red-bar, body #app .home .home-page-content-2 {
   /* Stay on top */
   top: 0;
   left: 0;
-  background-color: #3f3f41;
+  background-color: #003750;
   /* Black */
   overflow-x: hidden;
   /* Disable horizontal scroll */
@@ -109,9 +108,15 @@ body #app #nav .red-bar, body #app .home .home-page-content-2 {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   /*0.5 second transition effect to slide in the sidenav*/
+  /* När fliken är ute, så blir det andra den här färgen */
 }
 
-#slide .bm-overlay {
+#slide .bm-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+#slide .bm-menu .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
 
@@ -302,13 +307,20 @@ body #app {
 
 body #app #nav {
   background: rgba(83, 150, 196, 0.295);
-  height: 5rem;
+  height: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+body #app #nav #slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2.35rem;
 }
 
 body #app #nav .red-bar {
@@ -320,18 +332,14 @@ body #app #nav .red-bar {
 }
 
 body #app #nav #login {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: #E54626;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 0.4rem 1.1rem;
+  padding: 0 3rem;
+  margin-top: 2rem;
+  height: 2.2rem;
   border-radius: 15px 0 0 15px;
 }
 
