@@ -3,6 +3,13 @@
     align-items: center;
     flex-direction: column;
 
+    .msg {
+      width: 550px;
+      max-width: 80vw;
+      text-align: center;
+      margin: .5rem 0 2rem 0;
+    }
+
     form {
       display: flex;
       flex-direction: column;
@@ -22,10 +29,10 @@
           justify-content: flex-start;
         }
 
-        input,
-        textarea {
+        input, textarea {
           margin: 0 0 0.5rem 0;
         }
+        
       }
     }
   }

@@ -26,7 +26,7 @@ body #app #nav .red-bar, body #app #nav #login, body #app .home .home-page-conte
   font-weight: 400;
   font-size: 2rem;
   margin: 0 auto;
-  padding: 1rem 3rem;
+  padding: .75rem 4rem;
   text-transform: uppercase;
   -webkit-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
@@ -133,6 +133,13 @@ body #app #nav .red-bar, body #app #nav #login, body #app .home .home-page-conte
           flex-direction: column;
 }
 
+.about .msg {
+  width: 550px;
+  max-width: 80vw;
+  text-align: center;
+  margin: .5rem 0 2rem 0;
+}
+
 .about form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -170,8 +177,7 @@ body #app #nav .red-bar, body #app #nav #login, body #app .home .home-page-conte
           justify-content: flex-start;
 }
 
-.about form .contact input,
-.about form .contact textarea {
+.about form .contact input, .about form .contact textarea {
   margin: 0 0 0.5rem 0;
 }
 
@@ -296,6 +302,10 @@ body #app #nav .red-bar, body #app #nav #login, body #app .home .home-page-conte
     top: 879px; */
 }
 
+:root {
+  background: #00AEED;
+}
+
 body {
   margin: 0;
 }
@@ -380,6 +390,10 @@ body #app .home .home-page-content-1 .btn {
   border-radius: 40px;
   text-decoration: none;
   color: black;
+}
+
+body #app .home .home-page-content-2 {
+  margin: 2rem 0 0 3.5rem;
 }
 
 body #app .home .home-page-content-2 .home-page-content-img {

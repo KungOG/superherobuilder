@@ -9,6 +9,10 @@
 @import "power";
 @import "builder";
 
+:root {
+  background: $blue;
+}
+
 body {
   margin: 0;
 
@@ -82,7 +86,8 @@ body {
       }
 
       .home-page-content-2 {
-        @extend%center;
+        @extend %center;
+        margin: 2rem 0 0 3.5rem;
 
         .home-page-content-img {
           position: relative;
@@ -90,6 +95,7 @@ body {
           height: 14rem;
           opacity: 0.2;
           left: 40px;
+
           &:nth-child(2) {
             left: 0px;
             position: relative;
@@ -97,6 +103,7 @@ body {
             width: 12rem;
             height: 18rem;
           }
+
           &:nth-last-child(1) {
             position: relative;
             width: 10rem;
