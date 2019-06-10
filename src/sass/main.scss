@@ -131,7 +131,7 @@ body {
     // Mobile
     @media only screen and (max-width: 499px) {
       #app {
-        overflow: hidden;
+        overflow-x: hidden;
 
       .home {
         flex-direction: column;
@@ -163,6 +163,8 @@ body {
           background: $orange;
           height: 8rem;
           flex-direction: column;
+          position: sticky;
+          width: 100%;
 
           .red-bar {
             padding: .5rem;
@@ -176,15 +178,20 @@ body {
           #login {
             border-radius: 0px;
             position: absolute;
-            width: 5rem;
-            right: -35px;
+            right: 0px;
+            padding: .5rem 1rem 0 0;
             font-size: 1.4em;
-            top: -25px;
+            top: 0px;
+            margin: 0;
           }
 
           #slide {
             background: $orange;
             padding: 0;
+
+            .bm-menu {
+              width: 100%;
+            }
           }
 
         }
