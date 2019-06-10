@@ -3,7 +3,7 @@ h1, h2, h3, h4, h5, h6, label {
   font-family: 'Skranji', cursive;
 }
 
-body #app .about form .contact input, body #app .about form .contact textarea {
+body #app, body #app #nav, body #app .home .home-page-content-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,34 +39,20 @@ body #app .about form .contact input, body #app .about form .contact textarea {
   font-weight: 700;
 }
 
-body {
-  background: #00AEED;
-}
-
-body .home {
+.about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-body .home .home-page-content-1 .btn {
-  background: #E54626;
-  padding: 1rem 2rem;
-  border-radius: 40px;
-}
-
-body .home .home-page-content-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .home .home-page-content-2 .home-page-content-img {
-  width: 10rem;
-  height: 100%;
-}
-
-body #app .about form {
+.about form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,15 +62,22 @@ body #app .about form {
           flex-direction: column;
 }
 
-body #app .about form .contact {
+.about form .contact {
   background: #E54626;
   border: 1px solid black;
   width: 30rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-body #app .about form .contact label {
+.about form .contact label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,7 +89,236 @@ body #app .about form .contact label {
           justify-content: flex-start;
 }
 
-body #app .about form .contact input, body #app .about form .contact textarea {
-  width: 20rem;
+.about form .contact input,
+.about form .contact textarea {
+  margin: 0 0 0.5rem 0;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 4rem;
+  font-size: 1.75rem;
+}
+
+.showcast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  background: #E54626;
+}
+
+.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly !important;
+      -ms-flex-pack: space-evenly !important;
+          justify-content: space-evenly !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.profile-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.download-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: green;
+  color: black;
+  text-decoration: none;
+  padding: 2.3rem;
+  /* width: 282px;
+    height: 132px;
+    left: 70px;
+    top: 879px;  */
+}
+
+.edit-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: yellow;
+  color: black;
+  text-decoration: none;
+  padding: 2.3rem;
+  /* width: 282px;
+    height: 132px;
+    left: 70px;
+    top: 879px; */
+}
+
+.delete-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: red;
+  color: black;
+  text-decoration: none;
+  padding: 2.3rem;
+  /*   width: 282px;
+    height: 132px;
+    left: 70px;
+    top: 879px; */
+}
+
+body {
+  margin: 0;
+}
+
+body #app {
+  width: 800px;
+  height: 100vh;
+  margin: 0 auto;
+  background: #00AEED;
+}
+
+body #app #nav {
+  background: rgba(83, 150, 196, 0.295);
+  position: absolute;
+  top: 0;
+  height: 5rem;
+  width: 800px;
+}
+
+body #app #nav #login {
+  text-align: right;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  background: #E54626;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.4rem 1.1rem;
+  border-radius: 15px 0 0 15px;
+}
+
+body #app #nav .red-bar {
+  position: absolute;
+  top: 0;
+  padding: 0rem;
+  height: 5rem;
+  width: 300px;
+  background: #E54626;
+  border-radius: 0 0 35px 35px;
+  text-align: center;
+}
+
+body #app .home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem;
+}
+
+body #app .home .home-page-content-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+body #app .home .home-page-content-1 h1 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+
+body #app .home .home-page-content-1 p {
+  margin: 0rem 0 3rem 0;
+  font-size: 1.2rem;
+}
+
+body #app .home .home-page-content-1 .btn {
+  background: #E54626;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  color: black;
+}
+
+body #app .home .home-page-content-2 .home-page-content-img {
+  position: relative;
+  width: 10rem;
+  height: 14rem;
+  opacity: 0.2;
+  left: 40px;
+}
+
+body #app .home .home-page-content-2 .home-page-content-img:nth-child(2) {
+  left: 0px;
+  position: relative;
+  opacity: 1;
+  width: 12rem;
+  height: 18rem;
+}
+
+body #app .home .home-page-content-2 .home-page-content-img:nth-last-child(1) {
+  position: relative;
+  width: 10rem;
+  height: 14rem;
+  opacity: 0.2;
+  left: -40px;
 }
 /*# sourceMappingURL=main.css.map */

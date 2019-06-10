@@ -15,6 +15,7 @@
         <label>Message</label>
         <textarea rows="4" col="50"></textarea>
       </div>
+      <br>
       <button type="button" class="btn">
           Send
           <span>&gt;</span>
