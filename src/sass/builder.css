@@ -1,1 +1,93 @@
-/* No CSS *//*# sourceMappingURL=builder.css.map */
+.build {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.build .build-page-content-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+}
+
+.build .build-page-content-1 .build-page-content-1-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgba(0, 0, 0, 0.171);
+  width: 20rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 0.3rem;
+  margin: 2rem;
+}
+
+.build .build-page-content-1 .build-page-content-1-div .build-page-content-1-text {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.build .build-page-content-1 .build-page-content-1-div .build-page-content-1-gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0 2rem;
+}
+
+.build .build-page-content-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.build .build-page-content-2 .build-page-content-2-img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 5rem;
+}
+
+.build .build-page-content-2 .build-page-content-2-img-container .build-page-content-2-img-body-seperator {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.build .build-page-content-2 .build-page-content-2-img-container .build-page-content-2-img-body-seperator .build-page-content-2-img-selector {
+  font-size: 3rem;
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.build .build-page-content-2 .build-page-content-2-img-container .build-page-content-2-img-body-seperator .build-page-content-2-img {
+  width: 20rem;
+}
+/*# sourceMappingURL=builder.css.map */
