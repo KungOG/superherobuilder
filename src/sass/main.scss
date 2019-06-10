@@ -90,29 +90,55 @@ body {
         @extend %center;
         margin: 2rem 0 0 3.5rem;
 
-        .home-page-content-img {
-          position: relative;
-          width: 10rem;
-          height: 14rem;
-          opacity: 0.2;
-          left: 40px;
 
-          &:nth-child(2) {
-            left: 0px;
-            position: relative;
-            opacity: 1;
-            width: 12rem;
-            height: 18rem;
-          }
+.a {
 
-          &:nth-last-child(1) {
-            position: relative;
-            width: 10rem;
-            height: 14rem;
-            opacity: 0.2;
-            left: -40px;
-          }
-        }
+  position: relative;
+  animation: first 12s infinite;
+  animation-delay: 4s;
+}
+.a img {
+  width: 150px;
+  height: 150px;
+}
+.b {
+  position: relative;
+  animation: secund 12s infinite;
+  animation-delay: 8s;
+  
+}
+.b img {
+  width: 150px;
+  height: 150px;
+}
+.c {
+  position: relative;
+  animation: third 12s infinite;
+  animation-delay: 12s;
+}
+.c img {
+  width: 150px;
+  height: 150px;
+}
+
+@keyframes first {
+  0% {left: 0px; opacity: .3; transform: scale(1);}
+  33%  {left: 150px; opacity: 1;transform: scale(2);}
+  66%  {left: 300px; opacity: .3;transform: scale(1);}
+  100%  {left: 0px; opacity: .3;transform: scale(1);}
+}
+@keyframes secund {
+  0% {left: -150px; opacity: .3; transform: scale(1);}
+ 33%  {left: 0px; opacity: 1;transform: scale(2);}
+  66%  {left: 150px; opacity: .3;transform: scale(1);}
+  100%  {left: -150px; opacity: .3;transform: scale(1);}
+}
+@keyframes third {
+  0% {left: -300px; opacity: .3; transform: scale(1);}
+  33%  {left: -150px; opacity: 1;transform: scale(2);}
+  66%  {left: 0px; opacity: .3;transform: scale(1);}
+  100%  {left: -300px; opacity: .3;transform: scale(1);}
+}
       }
     }
   }
