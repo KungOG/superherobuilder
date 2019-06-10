@@ -28,4 +28,5 @@ export default {
 
 <style lang="scss">
 @import '@/sass/main.scss';
+
 </style>

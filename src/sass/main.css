@@ -317,6 +317,100 @@ body #app #nav .red-bar, body #app #nav #login, body #app .home .home-page-conte
     top: 879px; */
 }
 
+.build {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.build .build-page-content-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+}
+
+.build .build-page-content-1 .build-page-content-1-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgba(0, 0, 0, 0.171);
+  width: 20rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 0.3rem;
+  margin: 2rem;
+}
+
+.build .build-page-content-1 .build-page-content-1-div .build-page-content-1-text {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.build .build-page-content-1 .build-page-content-1-div .build-page-content-1-gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0 2rem;
+  font-weight: 500;
+}
+
+.build .build-page-content-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.build .build-page-content-2 .build-page-content-2-img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 5rem;
+}
+
+.build .build-page-content-2 .build-page-content-2-img-container .build-page-content-2-img-body-seperator {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.build .build-page-content-2 .build-page-content-2-img-container .build-page-content-2-img-body-seperator .build-page-content-2-img-selector {
+  font-size: 3rem;
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.build .build-page-content-2 .build-page-content-2-img-container .build-page-content-2-img-body-seperator .build-page-content-2-img {
+  width: 20rem;
+}
+
 :root {
   background: #00AEED;
 }
@@ -373,6 +467,10 @@ body #app .home {
   display: -ms-flexbox;
   display: flex;
   padding: 2rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 body #app .home .home-page-content-1 {
@@ -433,5 +531,54 @@ body #app .home .home-page-content-2 .home-page-content-img:nth-last-child(1) {
   height: 14rem;
   opacity: 0.2;
   left: -40px;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+  body #app .home {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  body #app {
+    overflow: hidden;
+  }
+  body #app .home {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #app #nav {
+    background: #E54626;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body #app #nav .red-bar {
+    padding: .5rem;
+    height: 3rem;
+    background: #E54626;
+    border-radius: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #app #nav #login {
+    margin: 0;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    border-radius: 0px;
+  }
+  body #app #nav #slide {
+    background: #E54626;
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
