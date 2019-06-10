@@ -1,59 +1,63 @@
 /* Hamburgar knappen */
-.bm-burger-button {
-    position : fixed;
-    width : 2rem;
-    height : 2rem;
-    left : 1rem;
-    top : 1.5rem;
-    cursor : pointer;
 
-    /* Strecken för hamburgar menyn */
-    .bm-burger-bars {
-        background-color : white;
+#slide {
+    display: flex;
+
+    .bm-burger-button {
+        width : 2rem;
+        height : 2rem;
+        left : 1rem;
+        top : 1.5rem;
+        cursor : pointer;
+
+        /* Strecken för hamburgar menyn */
+        .bm-burger-bars {
+            background-color : white;
+        }
+        /* Linjerna för menyn */
+        .line-style {
+            position : absolute;
+            height : 20%;
+            left : 0;
+            right : 0;
+        }
     }
-    /* Linjerna för menyn */
-    .line-style {
+    /* Krysset inne i menyn */
+    .cross-style {
         position : absolute;
-        height : 20%;
+        top : 12px;
+        right : 12px;
+        cursor : pointer;
+    }
+    /* Krysset och dess färg */
+    .bm-cross {
+        background : white;
+    }
+    /* Storlek på krysset */
+    .bm-cross-button {
+        height : 24px;
+        width : 24px;
+    }
+    /* Var hela menyn ska vara och ligga */
+    .bm-menu {
+        height : 100%; /* 100% Full-height */
+        width : 0; /* 0 width - change this with JavaScript */
+        position : fixed; /* Stay in place */
+        z-index : 1000; /* Stay on top */
+        top : 0;
         left : 0;
-        right : 0;
-    }
-}
-/* Krysset inne i menyn */
-.cross-style {
-    position : absolute;
-    top : 12px;
-    right : 12px;
-    cursor : pointer;
-}
-/* Krysset och dess färg */
-.bm-cross {
-    background : white;
-}
-/* Storlek på krysset */
-.bm-cross-button {
-    height : 24px;
-    width : 24px;
-}
-/* Var hela menyn ska vara och ligga */
-.bm-menu {
-    height : 100%; /* 100% Full-height */
-    width : 0; /* 0 width - change this with JavaScript */
-    position : fixed; /* Stay in place */
-    z-index : 1000; /* Stay on top */
-    top : 0;
-    left : 0;
-    background-color : rgb(00, 55, 80); /* Black */
-    overflow-x : hidden; /* Disable horizontal scroll */
-    padding-top : 60px; /* Place content 60px from the top */
-    transition : 0.5s; /*0.5 second transition effect to slide in the sidenav*/
+        background-color : rgb(00, 55, 80); /* Black */
+        overflow-x : hidden; /* Disable horizontal scroll */
+        padding-top : 60px; /* Place content 60px from the top */
+        transition : 0.5s; /*0.5 second transition effect to slide in the sidenav*/
 
-    a {
-        color: white;
-        text-decoration: none;
-    }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        /* När fliken är ute, så blir det andra den här färgen */ 
+        .bm-overlay {
+            background: rgba(0,0,0,.3);
+        }
 }
-/* När fliken är ute, så blir det andra den här färgen */ 
-.bm-overlay {
-    background: rgba(0,0,0,.3);
 }
