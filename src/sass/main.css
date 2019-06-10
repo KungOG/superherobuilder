@@ -4,6 +4,21 @@ h1, h2, h3, h4, h5, h6, label {
   font-family: 'Skranji', cursive;
 }
 
+p {
+  line-height: 1.5em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+a:hover {
+  color: white;
+}
+
 body #app #nav .red-bar, body #app #nav #login, body #app .home .home-page-content-2 {
   display: -webkit-box;
   display: -ms-flexbox;

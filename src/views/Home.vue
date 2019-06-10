@@ -6,7 +6,9 @@
         <p>Create your ultimate super hero with a fun name, look, powers and more!</p>
       </div>
       <div>
-        <a class="btn">Start</a>
+        <a class="btn">
+          <router-link to="/builder">Start</router-link>
+        </a>
       </div>
     </section>
     <section class="home-page-content-2">
