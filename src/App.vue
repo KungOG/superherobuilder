@@ -1,9 +1,6 @@
 <template>
   <div id="app">
     <div id="nav">
-         <span>
-      <p id="login">Login</p>
-        </span>
       <div class="red-bar">
         <h1>SUPERHEROES</h1>
         <!-- -->
@@ -14,6 +11,7 @@
         <router-link to="/profile">profile</router-link>
         <!-- -->
       </div>
+        <span id="login">Login</span>
     </div>
     <router-view/>
   </div>

@@ -12,25 +12,20 @@ body {
   margin: 0;
 
   #app {
-    width: 800px;
     height: 100vh;
     margin: 0 auto;
     background: $blue;
-    @extend %center;
 
     #nav {
       background: rgba(83, 150, 196, 0.295);
-      position: absolute;
       top: 0;
       height: 5rem;
-      width: 800px;
-      @extend %center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       #login {
         text-align: right;
-        position: absolute;
-        right: 0px;
-        top: 10px;
         background: $orange;
         color: white;
         font-family: Arial, Helvetica, sans-serif;
@@ -41,11 +36,8 @@ body {
       }
 
       .red-bar {
-        position: absolute;
-        top: 0;
-        padding: 0rem;
+        padding: .5rem;
         height: 5rem;
-        width: 300px;
         background: $orange;
         border-radius: 0 0 35px 35px;
         text-align: center;
