@@ -10,16 +10,16 @@
         </section>
         <section class="middle-content">
             <h3 class="showcast">Superman</h3>
-            <ul class="circles">
+            <ul class="circle">
                 <li></li>
                 <li class="active"></li>
                 <li></li>
             </ul>
         </section>
         <section class="profile-btns">
-            <a href="" class="download-btn" @click="downloadBtn">DOWNLOAD</a>
-            <a href="" class="edit-btn" @click="editBtn">EDIT</a>
-            <a href="" class="delete-btn" @click="deleteBtn">DELETE</a>
+            <a href="#" class="download-btn" @click="downloadBtn">download</a>
+            <a href="#" class="edit-btn" @click="editBtn">edit</a>
+            <a href="#" class="delete-btn" @click="deleteBtn">delete</a>
     </section>
     </main>
 </template>
@@ -29,13 +29,13 @@ export default {
     name: 'profile',
     methods : {
         downloadBtn () {
-            alert('You just downloaded your Superhero!')
+            alert('You just downloaded your Superhero!');
         },
         editBtn () {
-            
+            this.$router.push('/builder');
         },
         deleteBtn () {
-            alert('You just deleted your Superhero')
+            alert('You just deleted your Superhero');
         }
 
     }
