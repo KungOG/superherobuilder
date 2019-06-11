@@ -1,3 +1,4 @@
+@import 'responsiveProfile';
 .content {
     display: flex;
     justify-content: center;
@@ -14,14 +15,13 @@
     /* Center Bilderna */
     .home-page-content-2 {
         @extend %center;
-        margin: 2rem 0 0 3.5rem;
 
         .home-page-content-img {
           position: relative;
           width: 10rem;
           height: 14rem;
           opacity: 0.2;
-          left: 40px;
+          left: 1rem;
 
           &:nth-child(2) {
             left: 0px;
@@ -36,21 +36,23 @@
             width: 10rem;
             height: 14rem;
             opacity: 0.2;
-            left: -40px;
+            left: -1rem;
           }
         }
       }
 
     /* Namn och prickar */
     .middle-content {
-       display: flex;
-       justify-content: center;
-       flex-direction: column;
-       margin: 0 45%;
-
+        display: grid;
+        justify-content: space-evenly;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        '. showcast .'
+        '. circle .';
         
         .showcast {
-            display: flex;
+            display: grid;
+            grid-area: showcast;
             justify-content: center;
             background: $orange;
             padding: .5rem;
@@ -58,14 +60,12 @@
             text-transform: uppercase;
             
         }
-        .circles {
+        .circle {
             display: flex;
-            justify-content: space-evenly !important;
-            flex-direction: row;
-            text-decoration: none;
-
+            grid-area: circle;    
             li {           
-
+                font-size: 4rem;
+                margin: 0 2rem;
                 &.active {
                     color: white;
                 }
@@ -76,34 +76,39 @@
 
     /* Footer/Underknappar */
     .profile-btns {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        align-items: center;
+        display: grid;
+        justify-content: space-evenly;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        'downloadbtn editbtn deletebtn';
+
         font-family: 'Skranji', cursive;
-        margin: 0 10%;
         font-size: 1.3rem;
         font-weight: 700;
+        text-transform: uppercase;
         
         .download-btn {
+            grid-area: downloadbtn;
             background: $orange;
             color: black;
             text-decoration: none;
-            padding: 2.3rem; 
+            padding: 2rem;
             border-radius: 5px;   
         }    
-        .edit-btn {    
+        .edit-btn {
+            grid-area: editbtn; 
             background: yellow;
             color: black;
             text-decoration: none;
-            padding: 2.3rem;
+            padding: 2rem 4rem;
             border-radius: 5px;   
         }    
         .delete-btn {
+            grid-area: deletebtn;
             background: red;
             color: black;
             text-decoration: none;
-            padding: 2.3rem;
+            padding: 2rem 3rem;
             border-radius: 5px;   
         }    
     }

@@ -1,0 +1,66 @@
+@media screen and (max-width: 480px) {
+
+    .content {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-areas:
+        '. headline .',
+        '. img .',
+        '. showcast .',
+        '. circle .',
+        'downloadbtn editbtn deletebtn';
+
+        .headline {
+            grid-area: headline;
+            background: green;
+
+        }
+        .home-page-content-2 {
+            grid-area: img;
+            background: yellow;
+
+            &:nth-last-child(1) {
+                
+                background: orange;
+                
+            }
+            &:nth-child(2) {
+
+                background: pink;
+
+            }
+        }
+        .middle-content {
+           
+            .showcast {
+                grid-area: showcast;
+                background: darkblue;
+
+            }
+            .circle {
+                grid-area: circle;
+                background: darkgreen;
+
+            }
+        }
+        .profile-btns {
+            display: grid;
+
+            .download-btn {
+                grid-area: downloadbtn;
+                background: darkred;
+    
+            }
+            .edit-btn {
+                grid-area: editbtn;
+                background: black;
+                
+            }
+            .delete-btn {
+                grid-area: deletebtn;
+                background: white;
+    
+            }
+        }
+    }
+}
