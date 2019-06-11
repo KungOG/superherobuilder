@@ -30,6 +30,24 @@ body {
       #slide {
         display: flex;
         padding: 2.35rem;
+
+
+        .my-superheroes {
+          display: flex;
+          flex-direction: row;
+          
+          span {
+            margin: 0;
+          }
+
+          img {
+            width: 31px;
+            height: 26px;
+            margin: -.5rem .25rem 0 .25rem;
+          }
+
+        }
+
       }
     
       .red-bar {
@@ -217,7 +235,6 @@ body {
             background: $orange;
             padding: 0;
 
-    
           }
 
         }
