@@ -12,9 +12,15 @@
       </div>
     </section>
     <section class="home-page-content-2">
-      <img src="../assets/img/Superman.png" alt="Superhero img" class="home-page-content-img">
-      <img src="../assets/img/Superman.png" alt="Superhero img" class="home-page-content-img">
-      <img src="../assets/img/Superman.png" alt="Superhero img" class="home-page-content-img">
+        <div class="a">
+          <img src="../assets/img/1.png" alt="?">
+        </div>
+        <div class="b">
+          <img src="../assets/img/1.png" alt="?">
+        </div>
+        <div class="c">
+          <img src="../assets/img/1.png" alt="?">
+        </div>
     </section>
   </main>
 </template>

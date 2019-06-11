@@ -7,6 +7,10 @@
         <router-link to="/power">Power</router-link> 
         <router-link to="/contact">Contact</router-link> 
         <router-link to="/profile">Profile</router-link>
+        <div class="my-superheroes">
+          <span>My superheroes</span>
+          <img src="@/assets/img/user.png" alt="superheroes" />
+        </div>
       </Slide>
         <h1 class="red-bar">SUPERHEROES</h1>
         <p id="login">Login</p>
@@ -28,4 +32,5 @@ export default {
 
 <style lang="scss">
 @import '@/sass/main.scss';
+
 </style>

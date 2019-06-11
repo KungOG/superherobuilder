@@ -1,71 +1,115 @@
-.home {
+@import 'responsiveProfile';
+.content {
     display: flex;
     justify-content: center;
     flex-direction: column;
 
-}
-.headline {
-    display: flex;
-    justify-content: center;
-    margin-top: 4rem;
-    font-size: 1.75rem;
-}
-.showcast {
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    background: #E54626 /* $orange; */
-}
-.active {
-    display: flex;
-    justify-content: space-evenly !important;
-    flex-direction: row;
-}
-.profile-btns {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    
-}
-.download-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: green;
-    color: black;
-    text-decoration: none;
-    padding: 2.3rem;    
+    /* Titel texten */
+    .headline {
+        display: flex;
+        justify-content: center;
+        font-size: 1.75rem;
+        text-transform: uppercase;
+    }
 
-    /* width: 282px;
-    height: 132px;
-    left: 70px;
-    top: 879px;  */
-}    
-.edit-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: yellow;
-    color: black;
-    text-decoration: none;
-    padding: 2.3rem;
+    /* Center Bilderna */
+    .home-page-content-2 {
+        @extend %center;
 
-    /* width: 282px;
-    height: 132px;
-    left: 70px;
-    top: 879px; */
-}    
-.delete-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: red;
-    color: black;
-    text-decoration: none;
-    padding: 2.3rem;
+        .home-page-content-img {
+          position: relative;
+          width: 10rem;
+          height: 14rem;
+          opacity: 0.2;
+          left: 1rem;
 
-  /*   width: 282px;
-    height: 132px;
-    left: 70px;
-    top: 879px; */
-}    
+          &:nth-child(2) {
+            left: 0px;
+            position: relative;
+            opacity: 1;
+            width: 12rem;
+            height: 18rem;
+          }
+
+          &:nth-last-child(1) {
+            position: relative;
+            width: 10rem;
+            height: 14rem;
+            opacity: 0.2;
+            left: -1rem;
+          }
+        }
+      }
+
+    /* Namn och prickar */
+    .middle-content {
+        display: grid;
+        justify-content: space-evenly;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        '. showcast .'
+        '. circle .';
+        
+        .showcast {
+            display: grid;
+            grid-area: showcast;
+            justify-content: center;
+            background: $orange;
+            padding: .5rem;
+            border-radius: 5px;
+            text-transform: uppercase;
+            
+        }
+        .circle {
+            display: flex;
+            grid-area: circle;    
+            li {           
+                font-size: 4rem;
+                margin: 0 2rem;
+                &.active {
+                    color: white;
+                }
+            }
+            
+        }
+    }
+
+    /* Footer/Underknappar */
+    .profile-btns {
+        display: grid;
+        justify-content: space-evenly;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        'downloadbtn editbtn deletebtn';
+
+        font-family: 'Skranji', cursive;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        
+        .download-btn {
+            grid-area: downloadbtn;
+            background: $orange;
+            color: black;
+            text-decoration: none;
+            padding: 2rem;
+            border-radius: 5px;   
+        }    
+        .edit-btn {
+            grid-area: editbtn; 
+            background: yellow;
+            color: black;
+            text-decoration: none;
+            padding: 2rem 4rem;
+            border-radius: 5px;   
+        }    
+        .delete-btn {
+            grid-area: deletebtn;
+            background: red;
+            color: black;
+            text-decoration: none;
+            padding: 2rem 3rem;
+            border-radius: 5px;   
+        }    
+    }
+}

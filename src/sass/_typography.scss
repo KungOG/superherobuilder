@@ -4,14 +4,15 @@ h1, h2, h3, h4, h5, h6, label {
     font-family: 'Skranji', cursive;
 }
 
-p {
+p, span {
     line-height: 1.5em;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 a {
     color: black;
     text-decoration: none;
-    transition: color .3s ease-in-out;
+    transition: color .3s ease-out;
 
     &:hover {
         color: white;
