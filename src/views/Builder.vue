@@ -8,9 +8,17 @@
         </div>
         <div class="build-page-content-1-div">
             <p class="build-page-content-1-text">LENGTH </p>
+            <div class="build-page-content-1-length-slidecontainer">
+                <input type="range" min="120" max="220" value="180" class="slider" id="myRange" v-model="lengthNumber">
+                <p>Value: <span id="length-text">{{lengthNumber}}</span> cm</p>
+            </div>
         </div>
         <div class="build-page-content-1-div">
             <p class="build-page-content-1-text">BODY </p>
+            <img class="build-page-content-1-body" src="@/assets/img/body4.png">
+            <img class="build-page-content-1-body" src="@/assets/img/body3.png">
+            <img class="build-page-content-1-body" src="@/assets/img/body2.png">
+            <img class="build-page-content-1-body" src="@/assets/img/body1.png">
         </div>
         <a class="btn">
             <router-link to="/power">
@@ -44,7 +52,6 @@
                 <img v-show="lImgNumber == 3" class="build-page-content-2-img legs" src="../assets/img/l3.png" alt="">
                 <a class="build-page-content-2-img-selector" @click="lBackForward = 2, legImgScroller()">&gt;</a>
             </div>
-            
         </div>
     </section>
   </main>
@@ -62,7 +69,8 @@ export default {
             hBackForward: 1,
             bBackForward: 1,
             lBackForward: 1,
-            imgUrl: '../assets/img/b.png'
+            imgUrl: '../assets/img/b.png',
+            lengthNumber: 180
         }
     },
 
