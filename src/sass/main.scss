@@ -174,41 +174,9 @@ body {
         .home-page-content-1 {
           .btn {
             display: block;
-            margin-bottom: 5rem;
+            margin-bottom: 12rem;
+            margin-top: 5rem;
           }
-        }
-
-        .home-page-content-2 {
-          .a img {
-            width: 75px;
-            height: 75px;
-          }
-          .b img {
-            width: 75px;
-            height: 75px;
-          }
-          .c img {
-          width: 75px;
-          height: 75px;
-          }
-          @keyframes first {
-            0% {left: -20px; opacity: .3; transform: scale(1);}
-            33%  {left: 55px; opacity: 1;transform: scale(2);}
-            66%  {left: 130px; opacity: .3;transform: scale(1);}
-            100%  {left: -20px; opacity: .3;transform: scale(1);}
-            }
-            @keyframes secund {
-            0% {left: -95px; opacity: .3; transform: scale(1);}
-            33%  {left: -20px; opacity: 1;transform: scale(2);}
-            66%  {left: 55px; opacity: .3;transform: scale(1);}
-            100%  {left: -95px; opacity: .3;transform: scale(1);}
-            }
-            @keyframes third {
-            0% {left: -170px; opacity: .3; transform: scale(1);}
-            33%  {left: -95px; opacity: 1;transform: scale(2);}
-            66%  {left: -20px; opacity: .3;transform: scale(1);}
-            100%  {left: -170px; opacity: .3;transform: scale(1);}
-            }
         }
       }
     } 
@@ -243,11 +211,40 @@ body {
         .home-page-content-text {
 
           p {
-            margin: 1.2rem;
+            margin: 2rem;
           }
         }
         .home-page-content-2 {
-          margin-top: 2rem;
+          .a img {
+            width: 75px;
+            height: 75px;
+          }
+          .b img {
+            width: 75px;
+            height: 75px;
+          }
+          .c img {
+          width: 75px;
+          height: 75px;
+          }
+          @keyframes first {
+            0% {left: -20px; opacity: .3; transform: scale(1);}
+            33%  {left: 55px; opacity: 1;transform: scale(2);}
+            66%  {left: 130px; opacity: .3;transform: scale(1);}
+            100%  {left: -20px; opacity: .3;transform: scale(1);}
+            }
+            @keyframes secund {
+            0% {left: -95px; opacity: .3; transform: scale(1);}
+            33%  {left: -20px; opacity: 1;transform: scale(2);}
+            66%  {left: 55px; opacity: .3;transform: scale(1);}
+            100%  {left: -95px; opacity: .3;transform: scale(1);}
+            }
+            @keyframes third {
+            0% {left: -170px; opacity: .3; transform: scale(1);}
+            33%  {left: -95px; opacity: 1;transform: scale(2);}
+            66%  {left: -20px; opacity: .3;transform: scale(1);}
+            100%  {left: -170px; opacity: .3;transform: scale(1);}
+            }
         }
       }
 
@@ -286,5 +283,17 @@ body {
         }
       }
     }
+    @media only screen and (max-width: 321px) {
+      #app {
+        .home{
+          .home-page-content-text {
+    
+            p {
+              margin: 1.2rem;
+            }
+          }
 
+        }
+      }
+    }
 }
