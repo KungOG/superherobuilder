@@ -1,21 +1,25 @@
-main{
-    @extend%center;
-    
-    margin: .5rem 0 0 0;
+main {
+    @extend %center;
+    margin: .5rem 1rem;
     padding: 0;
     
     .home-page-content-1 {
         flex: 1;
-        @extend%center;
+        @extend %center;
+        margin-top: -10rem;
         flex-direction: column;
+
         div {
-            h2{
+
+            h2 {
                 margin: 0;
                 font-size: 1.1rem;
                 left: -40px;
                 position: relative;
             }
+
         }
+
         input {
             display: block;
             margin: .5rem;
@@ -23,38 +27,39 @@ main{
             font-size: 1.5rem;
             border-radius: 10px;
         }
+
         img {
             margin: 1rem;
             width: 150px;
             display: block;
         }
     }
+
     .selector {
         font-size: 3rem;
         font-weight: 900;
-        padding: 0;
-        margin: .75rem;
+        padding: 0 1rem;
         cursor: pointer;
     }
     .content-1 {
         flex: 1;
-        @extend%center;
+        @extend %center;
         flex-direction: column;
-
 
         h2 {
             margin: 0;
             font-size: 1.75rem;
         }
         .pros {
-            max-width: 250px;
+            max-width: 450px;
+            width: 50vw;
             border-radius: 25px;
             background: rgba(5, 166, 2, 0.185);
             margin: 0 1rem;
-            padding: 1rem;
+            padding: 2rem;
             
-            h3 {
-                margin: 0;
+            h2 {
+                margin: .3rem 0;
             }
             p {
                 margin: 0;
@@ -65,18 +70,56 @@ main{
             }
         }
         .cons {
-            max-width: 250px;
+            max-width: 450px;
             border-radius: 25px;
             background: rgba(255, 82, 82, 0.185);
             margin: 1rem;
-            padding: 1rem;
+            padding: 2rem;
                         
-            h3 {
-                margin: 0;
-            }
             p {
                 margin: 0;
             }
         }
     }
 }
+
+ // Tablet
+    @media only screen and (min-width: 500px) and (max-width: 768px) {
+      .about {
+
+        h1 {
+          margin-top: 3rem;
+        }
+
+        .msg {
+          width: 400px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 499px) {
+      .about {
+
+        .msg {
+          max-width: 85vw;
+        }
+
+        form {
+          width: 100%;
+
+          .contact {
+            width: 80vw;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+          }
+          
+          .btn {
+            width: 100%;
+            border-radius: 0;
+          }
+          
+        }
+
+      }
+    }
