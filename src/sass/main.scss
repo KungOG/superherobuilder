@@ -99,7 +99,7 @@ body {
 
         p {
           margin: 0rem 0 3rem 0;
-          font-size: 1.2rem;
+          font-size: 1.5rem;
           padding: 0 5rem;
         }
 
@@ -117,7 +117,6 @@ body {
         margin: 2rem 0 0 3.5rem;
 
         .a {
-
         position: relative;
         animation: first 12s infinite;
         animation-delay: -4s;
@@ -187,11 +186,13 @@ body {
             margin-top: 4rem;
           }
           h1 {
-            margin:  0;
+            margin: 0;
+            font-size: 2.5em;
             margin-bottom: 1rem;
           }
           p {
             width: 75%;
+            font-size: 2em;
             justify-content: center;
             margin: 0;
           }
@@ -233,6 +234,12 @@ body {
           p {
             margin: 0 auto;
             padding: 0;
+            font-size: 1.3em;
+          }
+
+          h1 {
+            font-size: 1.5em;
+            padding: .5rem;
           }
         }
         .home-page-content-2 {
