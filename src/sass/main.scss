@@ -63,7 +63,7 @@ body {
         @extend %center;
         background: $orange;
         color: white;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto', Arial, sans-serif;
         font-weight: 700;
         text-transform: uppercase;
         padding: 0 3rem;
@@ -71,6 +71,10 @@ body {
         height: 2.2rem;
         border-radius: 15px 0 0 15px;
         cursor: pointer;
+      }
+
+      #login-mobile {
+        display: none;
       }
 
     }
@@ -95,7 +99,7 @@ body {
 
         p {
           margin: 0rem 0 3rem 0;
-          font-size: 1.2rem;
+          font-size: 1.5rem;
           padding: 0 5rem;
         }
 
@@ -113,7 +117,6 @@ body {
         margin: 2rem 0 0 3.5rem;
 
         .a {
-
         position: relative;
         animation: first 12s infinite;
         animation-delay: -4s;
@@ -183,11 +186,13 @@ body {
             margin-top: 4rem;
           }
           h1 {
-            margin:  0;
+            margin: 0;
+            font-size: 2.5em;
             margin-bottom: 1rem;
           }
           p {
             width: 75%;
+            font-size: 2em;
             justify-content: center;
             margin: 0;
           }
@@ -229,6 +234,12 @@ body {
           p {
             margin: 0 auto;
             padding: 0;
+            font-size: 1.3em;
+          }
+
+          h1 {
+            font-size: 1.5em;
+            padding: .5rem;
           }
         }
         .home-page-content-2 {
@@ -269,6 +280,7 @@ body {
           background: $orange;
           height: 7rem;
           flex-direction: column;
+
           width: 100%;
 
           .red-bar {
@@ -281,19 +293,26 @@ body {
           }
 
           #login {
-            border-radius: 0px;
-            position: absolute;
-            right: 0px;
-            padding: .5rem 1rem 0 0;
-            font-size: 1.4em;
-            top: 0px;
-            margin: 0;
+            display: none;
           }
+  
+          #login-mobile {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background: $orange;
+            color: white;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            margin: 0 .5rem;
+          }
+          
 
           #slide {
             background: $orange;
             padding: 0;
-
           }
 
         }

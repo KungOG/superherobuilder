@@ -53,7 +53,13 @@
                 </a>
             </router-link>
         </div>
+
         <a @click="incPowers()" class="selector">&gt;</a>
+        <router-link to="/profile">
+            <a class="btn-tablet">
+                Done
+            </a>
+        </router-link>
     </main>
 </template>
 
@@ -69,14 +75,23 @@ export default {
 
     methods: {
         incPowers() {
-            if(this.powerCount == 1 || this.powerCount == 2) {
+            if(this.powerCount > 0) {
                 this.powerCount++;
+                if (this.powerCount > 3) {
+                    this.powerCount = 1;
+                }
             }
         },
         decPowers() {
-            if(this.powerCount == 2 || this.powerCount == 3) {
+            if(this.powerCount <= 3) {
                 this.powerCount--;
+                if (this.powerCount == 0) {
+                    this.powerCount = 3;
+                }
             }
+        },
+        makeSomeMagic(){
+            this.$store.commit('setName', this.name);
         }
     },
 
@@ -89,12 +104,6 @@ export default {
         },
         legImg() {
             return this.$store.getters.getLegNumber
-        }
-    },
-    methods: {
-        makeSomeMagic(){
-        this.$store.commit('setName', this.name);
-
         }
     }
 }
