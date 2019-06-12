@@ -9,7 +9,7 @@
         </div>
             <a class="selector">&#60;</a>
         <div class="content-1">
-            <h2>The Slizzer</h2>
+            <h1>The Sizzler</h1>
             <div class="pros">
                 <h2>Magic</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit sollicitudin magna id consectetur. 
