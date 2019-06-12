@@ -12,6 +12,7 @@
           <img src="@/assets/img/user.png" alt="superheroes" />
         </div>
       </Slide>
+        <p id="login-mobile">Login</p>
         <h1 class="red-bar">SUPERHEROES</h1>
         <p id="login">Login</p>
     </div>
