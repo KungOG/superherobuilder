@@ -26,6 +26,7 @@
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
+        border-radius: 5px;
 
         label {
           display: flex;
@@ -35,6 +36,7 @@
 
         input, textarea {
           margin: 0 0 .5rem 0;
+          border-radius: 5px;
         }
         
       }

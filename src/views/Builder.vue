@@ -3,13 +3,13 @@
     <section class="build-page-content-1" :style="{'margin-right': contentOneMargin}">
         <div class="build-page-content-1-div">
             <p class="build-page-content-1-text">GENDER </p>
-            <a class="build-page-content-1-gender">&#9794;</a>
-            <a class="build-page-content-1-gender">&#9792;</a>
+            <a @click="femaleOrMale = 'm'" class="build-page-content-1-gender">&#9794;</a>
+            <a @click="femaleOrMale = 'f'" class="build-page-content-1-gender">&#9792;</a>
         </div>
         <div class="build-page-content-1-div">
             <p class="build-page-content-1-text">LENGTH </p>
             <div class="build-page-content-1-length-slidecontainer">
-                <input type="range" min="120" max="220" value="180" class="slider" id="myRange" v-model="lengthNumber">
+                <input @click="bodyHeightPicker()" type="range" min="150" max="220" value="180" class="slider" id="myRange" v-model="lengthNumber">
                 <p>Value: <span id="length-text">{{lengthNumber}}</span> cm</p>
             </div>
         </div>
@@ -20,7 +20,7 @@
             <img @click="bodySizePicker(2)" class="build-page-content-1-body" src="@/assets/img/body2.png">
             <img @click="bodySizePicker(1)" class="build-page-content-1-body" src="@/assets/img/body1.png">
         </div>
-        <a @click="bodyNumbers()" class="btn">
+        <a @click="bodyChosen()" class="btn">
             <router-link to="/power">
                 Step two
                 <span>&gt;</span>
@@ -29,27 +29,51 @@
     </section>
     <section class="build-page-content-2">
         <div class="build-page-content-2-img-container">
-            <div class="build-page-content-2-img-body-seperator">
+            <div v-show="femaleOrMale == 'm'" class="build-page-content-2-img-body-seperator">
                 <a class="build-page-content-2-img-selector" @click="hBackForward = 1, headImgScroller()">&#60;</a>
-                <img v-show="hImgNumber == 1" class="build-page-content-2-img head" :style="{width: hWidth}" src="../assets/img/h1.png" alt="">
-                <img v-show="hImgNumber == 2" class="build-page-content-2-img head" :style="{width: hWidth}" src="../assets/img/h2.png" alt="">
-                <img v-show="hImgNumber == 3" class="build-page-content-2-img head" :style="{width: hWidth}" src="../assets/img/h3.png" alt="">
+                <img v-show="hImgNumber == 1" class="build-page-content-2-img head" :style="{width: hWidth, height: headHeight}" src="../assets/img/h1.png" alt="">
+                <img v-show="hImgNumber == 2" class="build-page-content-2-img head" :style="{width: hWidth, height: headHeight}" src="../assets/img/h2.png" alt="">
+                <img v-show="hImgNumber == 3" class="build-page-content-2-img head" :style="{width: hWidth, height: headHeight}" src="../assets/img/h3.png" alt="">
                 <a class="build-page-content-2-img-selector" @click="hBackForward = 2, headImgScroller()">&gt;</a>
             </div>
 
-            <div class="build-page-content-2-img-body-seperator">
+            <div v-show="femaleOrMale == 'm'" class="build-page-content-2-img-body-seperator">
                 <a class="build-page-content-2-img-selector" @click="bBackForward = 1, bodyImgScroller()">&#60;</a>
-                <img v-show="bImgNumber == 1" class="build-page-content-2-img body" :style="{width: width}" src="../assets/img/b1.png" alt="">
-                <img v-show="bImgNumber == 2" class="build-page-content-2-img body" :style="{width: width}" src="../assets/img/b2.png" alt="">
-                <img v-show="bImgNumber == 3" class="build-page-content-2-img body" :style="{width: width}" src="../assets/img/b3.png" alt="">
+                <img v-show="bImgNumber == 1" class="build-page-content-2-img body" :style="{width: width, height: bodyHeight}" src="../assets/img/b1.png" alt="">
+                <img v-show="bImgNumber == 2" class="build-page-content-2-img body" :style="{width: width, height: bodyHeight}" src="../assets/img/b2.png" alt="">
+                <img v-show="bImgNumber == 3" class="build-page-content-2-img body" :style="{width: width, height: bodyHeight}" src="../assets/img/b3.png" alt="">
                 <a class="build-page-content-2-img-selector" @click="bBackForward = 2, bodyImgScroller()">&gt;</a>
             </div>
 
-            <div class="build-page-content-2-img-body-seperator">
+            <div v-show="femaleOrMale == 'm'" class="build-page-content-2-img-body-seperator">
                 <a class="build-page-content-2-img-selector" @click="lBackForward = 1, legImgScroller()">&#60;</a>
-                <img v-show="lImgNumber == 1" class="build-page-content-2-img" :style="{width: width}" src="../assets/img/l1.png" alt="">
-                <img v-show="lImgNumber == 2" class="build-page-content-2-img" :style="{width: width}" src="../assets/img/l2.png" alt="">
-                <img v-show="lImgNumber == 3" class="build-page-content-2-img" :style="{width: width}" src="../assets/img/l3.png" alt="">
+                <img v-show="lImgNumber == 1" class="build-page-content-2-img" :style="{width: width, height: legHeight}" src="../assets/img/l1.png" alt="">
+                <img v-show="lImgNumber == 2" class="build-page-content-2-img" :style="{width: width, height: legHeight}" src="../assets/img/l2.png" alt="">
+                <img v-show="lImgNumber == 3" class="build-page-content-2-img" :style="{width: width, height: legHeight}" src="../assets/img/l3.png" alt="">
+                <a class="build-page-content-2-img-selector" @click="lBackForward = 2, legImgScroller()">&gt;</a>
+            </div>
+
+            <div v-show="femaleOrMale == 'f'" class="build-page-content-2-img-body-seperator">
+                <a class="build-page-content-2-img-selector" @click="hBackForward = 1, headImgScroller()">&#60;</a>
+                <img v-show="hImgNumber == 1" class="build-page-content-2-img head" :style="{width: hWidth, height: headHeight}" src="../assets/img/fh1.png" alt="">
+                <img v-show="hImgNumber == 2" class="build-page-content-2-img head" :style="{width: hWidth, height: headHeight}" src="../assets/img/fh2.png" alt="">
+                <img v-show="hImgNumber == 3" class="build-page-content-2-img head" :style="{width: hWidth, height: headHeight}" src="../assets/img/fh3.png" alt="">
+                <a class="build-page-content-2-img-selector" @click="hBackForward = 2, headImgScroller()">&gt;</a>
+            </div>
+
+            <div v-show="femaleOrMale == 'f'" class="build-page-content-2-img-body-seperator">
+                <a class="build-page-content-2-img-selector" @click="bBackForward = 1, bodyImgScroller()">&#60;</a>
+                <img v-show="bImgNumber == 1" class="build-page-content-2-img body" :style="{width: width, height: bodyHeight}" src="../assets/img/fb1.png" alt="">
+                <img v-show="bImgNumber == 2" class="build-page-content-2-img body" :style="{width: width, height: bodyHeight}" src="../assets/img/fb2.png" alt="">
+                <img v-show="bImgNumber == 3" class="build-page-content-2-img body" :style="{width: width, height: bodyHeight}" src="../assets/img/fb3.png" alt="">
+                <a class="build-page-content-2-img-selector" @click="bBackForward = 2, bodyImgScroller()">&gt;</a>
+            </div>
+
+            <div v-show="femaleOrMale == 'f'" class="build-page-content-2-img-body-seperator">
+                <a class="build-page-content-2-img-selector" @click="lBackForward = 1, legImgScroller()">&#60;</a>
+                <img v-show="lImgNumber == 1" class="build-page-content-2-img" :style="{width: width, height: legHeight}" src="../assets/img/fl1.png" alt="">
+                <img v-show="lImgNumber == 2" class="build-page-content-2-img" :style="{width: width, height: legHeight}" src="../assets/img/fl2.png" alt="">
+                <img v-show="lImgNumber == 3" class="build-page-content-2-img" :style="{width: width, height: legHeight}" src="../assets/img/fl3.png" alt="">
                 <a class="build-page-content-2-img-selector" @click="lBackForward = 2, legImgScroller()">&gt;</a>
             </div>
         </div>
@@ -73,8 +97,15 @@ export default {
             lengthNumber: 180,
             width: 20 + 'rem',
             hWidth: 20 + 'rem',
-            contentOneMargin: 0
+            contentOneMargin: 0,
+            headHeight: 5 + 'rem',
+            bodyHeight: 8 + 'rem',
+            legHeight: 14 + 'rem',
+            femaleOrMale: 'f'
         }
+    },
+
+    computed: {
     },
 
     methods: {
@@ -130,7 +161,8 @@ export default {
             this.$store.commit('setLegNumber', this.lImgNumber);
         },
 
-        bodyNumbers() {
+        bodyChosen() {
+            this.$store.commit('setFemaleOrMale', this.femaleOrMale)
             this.$store.commit('setHeadNumber', this.hImgNumber);
             this.$store.commit('setBodyNumber', this.bImgNumber);
             this.$store.commit('setLegNumber', this.lImgNumber);
@@ -153,6 +185,69 @@ export default {
                 this.contentOneMargin = -2 + 'rem';
                 this.hWidth = 21 + 'rem';
                 this.width = 22 + 'rem';
+            }
+        },
+        bodyHeightPicker() {
+            if(this.lengthNumber >= 150 && this.lengthNumber < 155) {
+                this.headHeight = 4.6 + 'rem'
+                this.bodyHeight = 6.6 + 'rem';
+                this.legHeight = 12.6 + 'rem';
+            } else if(this.lengthNumber >= 155 && this.lengthNumber < 160) {
+                this.headHeight = 4.7 + 'rem'
+                this.bodyHeight = 6.8 + 'rem';
+                this.legHeight = 12.8 + 'rem';
+            } else if(this.lengthNumber >= 160 && this.lengthNumber < 165) {
+                this.headHeight = 4.7 + 'rem'
+                this.bodyHeight = 7 + 'rem';
+                this.legHeight = 13 + 'rem';
+            } else if(this.lengthNumber >= 165 && this.lengthNumber < 170) {
+                this.headHeight = 4.8 + 'rem'
+                this.bodyHeight = 7.2 + 'rem';
+                this.legHeight = 13.2 + 'rem';
+            } else if(this.lengthNumber >= 170 && this.lengthNumber < 175) {
+                this.headHeight = 4.8 + 'rem'
+                this.bodyHeight = 7.4 + 'rem';
+                this.legHeight = 13.4 + 'rem';
+            } else if(this.lengthNumber >= 170 && this.lengthNumber < 175) {
+                this.headHeight = 4.9 + 'rem'
+                this.bodyHeight = 7.6 + 'rem';
+                this.legHeight = 13.6 + 'rem';
+            } else if(this.lengthNumber >= 175 && this.lengthNumber < 180) {
+                this.headHeight = 4.9 + 'rem'
+                this.bodyHeight = 7.8 + 'rem';
+                this.legHeight = 13.8 + 'rem';
+            } else if(this.lengthNumber >= 180 && this.lengthNumber < 185) {
+                this.headHeight = 5 + 'rem'
+                this.bodyHeight = 8 + 'rem';
+                this.legHeight = 14 + 'rem';
+            } else if(this.lengthNumber >= 185 && this.lengthNumber < 190) {
+                this.headHeight = 5 + 'rem'
+                this.bodyHeight = 8.2 + 'rem';
+                this.legHeight = 14.2 + 'rem';
+            } else if(this.lengthNumber >= 190 && this.lengthNumber < 195) {
+                this.headHeight = 5.1 + 'rem'
+                this.bodyHeight = 8.4 + 'rem';
+                this.legHeight = 14.4 + 'rem';
+            } else if(this.lengthNumber >= 195 && this.lengthNumber < 200) {
+                this.headHeight = 5.1 + 'rem'
+                this.bodyHeight = 8.6 + 'rem';
+                this.legHeight = 14.6 + 'rem';
+            } else if(this.lengthNumber >= 200 && this.lengthNumber < 205) {
+                this.headHeight = 5.2 + 'rem'
+                this.bodyHeight = 8.8 + 'rem';
+                this.legHeight = 14.8 + 'rem';
+            } else if(this.lengthNumber >= 205 && this.lengthNumber < 210) {
+                this.headHeight = 5.2 + 'rem'
+                this.bodyHeight = 9 + 'rem';
+                this.legHeight = 15 + 'rem';
+            } else if(this.lengthNumber >= 210 && this.lengthNumber < 215) {
+                this.headHeight = 5.3 + 'rem'
+                this.bodyHeight = 9.2 + 'rem';
+                this.legHeight = 15.2 + 'rem';
+            } else if(this.lengthNumber >= 215 && this.lengthNumber <= 220) {
+                this.headHeight = 5.3 + 'rem'
+                this.bodyHeight = 9.4 + 'rem';
+                this.legHeight = 15.4 + 'rem';
             }
         }
     }
