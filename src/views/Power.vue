@@ -3,7 +3,7 @@
         <div class="home-page-content-1" id="power-page">
             <div class="content-header">
                 <h2>Super Name:</h2>
-                <input type="text">
+                <input v-model="name" >
             </div>
 
             <img v-if="headImg == 1" src="@/assets/img/h1.png" alt="Head image">
@@ -47,8 +47,8 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit sollicitudin magna id consectetur. 
                    Praesent ornare nunc eget odio dignissim, id ullamcorper nulla lobortis.</p>
             </div>
-            <router-link to="/profile">
-                <a class="btn">
+            <router-link to="/profile" >
+                <a class="btn" @click="makeSomeMagic()">
                     Done
                 </a>
             </router-link>
@@ -60,8 +60,9 @@
 <script>
 export default {
     name: 'power',
-    data() {
+    data(){
         return {
+            name:"",
             powerCount: 1
         }
     },
@@ -88,10 +89,13 @@ export default {
         },
         legImg() {
             return this.$store.getters.getLegNumber
-        },
-/*         powerCounter() {
-             return this.$store.getters.powerCounter
-        } */
+        }
+    },
+    methods: {
+        makeSomeMagic(){
+        this.$store.commit('setName', this.name);
+
+        }
     }
 }
 </script>

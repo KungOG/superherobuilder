@@ -9,7 +9,7 @@
             <img src="../assets/img/Superman.png" alt="Superhero img" class="home-page-content-img">
         </section>
         <section class="middle-content">
-            <h3 class="showcast">Superman</h3>
+            <h3 class="showcast">{{ name }}</h3>
             <ul class="circle">
                 <li></li>
                 <li class="active"></li>
@@ -27,6 +27,12 @@
 <script>
 export default {
     name: 'profile',
+        computed: {
+        name() {
+            return this.$store.getters.name
+        }
+        },
+
     methods : {
         downloadBtn () {
             alert('You just downloaded your Superhero!');
@@ -37,7 +43,7 @@ export default {
         deleteBtn () {
             alert('You just deleted your Superhero');
         }
-
     }
+    
 }
 </script>
