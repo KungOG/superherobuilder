@@ -172,20 +172,23 @@ body {
 
       .home {
         flex-direction: column;
-        padding: 0 .5rem;
-
+        margin-top: 2rem;
+        
         .home-page-content-1 {
+          padding: 0;
           .btn {
             display: block;
             margin-bottom: 12rem;
             margin-top: 4rem;
           }
           h1 {
-            margin: 2rem 0;
+            margin:  0;
+            margin-bottom: 1rem;
           }
           p {
             width: 75%;
-            margin: 0 auto;
+            justify-content: center;
+            margin: 0;
           }
         }
       }
