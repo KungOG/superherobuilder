@@ -20,7 +20,7 @@
             <img class="build-page-content-1-body" src="@/assets/img/body2.png">
             <img class="build-page-content-1-body" src="@/assets/img/body1.png">
         </div>
-        <a class="btn">
+        <a @click="bodyNumbers()" class="btn">
             <router-link to="/power">
                 Step two
                 <span>&gt;</span>
@@ -89,6 +89,7 @@ export default {
                     this.hImgNumber--;
                 }
             }
+            this.$store.commit('setHeadNumber', this.hImgNumber);
         },
 
         bodyImgScroller() {
@@ -105,6 +106,8 @@ export default {
                     this.bImgNumber--;
                 }
             }
+            
+            this.$store.commit('setBodyNumber', this.bImgNumber);
         },
 
         legImgScroller() {
@@ -121,6 +124,13 @@ export default {
                     this.lImgNumber--;
                 }
             }
+            this.$store.commit('setLegNumber', this.lImgNumber);
+        },
+
+        bodyNumbers() {
+            this.$store.commit('setHeadNumber', this.hImgNumber);
+            this.$store.commit('setBodyNumber', this.bImgNumber);
+            this.$store.commit('setLegNumber', this.lImgNumber);
         }
     }
 
