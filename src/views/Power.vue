@@ -1,11 +1,11 @@
 <template>
     <main>
-        <div class="home-page-content-1">
+        <div class="home-page-content-1" id="power-page">
             <div class="content-header">
                 <h2>Super Name:</h2>
                 <input type="text">
             </div>
-            
+
             <img v-if="headImg == 1" src="@/assets/img/h1.png" alt="Head image">
             <img v-if="headImg == 2" src="@/assets/img/h2.png" alt="Head image">
             <img v-if="headImg == 3" src="@/assets/img/h3.png" alt="Head image">
