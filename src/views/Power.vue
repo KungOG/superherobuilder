@@ -11,15 +11,18 @@
         <div class="content-1">
             <h2>The Slizzer</h2>
             <div class="pros">
-                <h3>Lorem</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h2>Magic</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit sollicitudin magna id consectetur. 
+                   Praesent ornare nunc eget odio dignissim, id ullamcorper nulla lobortis.</p>
                 <hr>
-                <h3>Lorem</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h2>Flying</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit sollicitudin magna id consectetur. 
+                   Praesent ornare nunc eget odio dignissim, id ullamcorper nulla lobortis.</p>
             </div>
             <div class="cons">
-                <h3>Lorem</h3>
-                <p>Voluptatum non dolor tempora eligendi nemo ab! Numquam.</p>
+                <h2>Sleepy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit sollicitudin magna id consectetur. 
+                   Praesent ornare nunc eget odio dignissim, id ullamcorper nulla lobortis.</p>
             </div>
             <a class="btn">
                 <router-link to="/profile">Done</router-link>

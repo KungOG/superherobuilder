@@ -1,21 +1,24 @@
-main{
-    @extend%center;
-    
+main {
+    @extend %center;
     margin: .5rem 0 0 0;
     padding: 0;
     
     .home-page-content-1 {
         flex: 1;
-        @extend%center;
+        @extend %center;
         flex-direction: column;
+
         div {
-            h2{
+
+            h2 {
                 margin: 0;
                 font-size: 1.1rem;
                 left: -40px;
                 position: relative;
             }
+
         }
+
         input {
             display: block;
             margin: .5rem;
@@ -23,12 +26,14 @@ main{
             font-size: 1.5rem;
             border-radius: 10px;
         }
+
         img {
             margin: 1rem;
             width: 150px;
             display: block;
         }
     }
+
     .selector {
         font-size: 3rem;
         font-weight: 900;
@@ -38,9 +43,8 @@ main{
     }
     .content-1 {
         flex: 1;
-        @extend%center;
+        @extend %center;
         flex-direction: column;
-
 
         h2 {
             margin: 0;
