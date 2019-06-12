@@ -34,14 +34,14 @@ export default {
         },
 
     methods : {
-        downloadBtn () {
-            alert('You just downloaded your Superhero!');
+        downloadBtn (name) {
+            alert('You just downloaded' + ' '+ this.name + '!');
         },
         editBtn () {
             this.$router.push('/builder');
         },
-        deleteBtn () {
-            alert('You just deleted your Superhero');
+        deleteBtn (name) {
+            alert('You just deleted' + ' '+ this.name + '!');
         }
     }
     
