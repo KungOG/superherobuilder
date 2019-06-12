@@ -35,13 +35,13 @@ export default {
 
     methods : {
         downloadBtn (name) {
-            alert('You just downloaded' + ' '+ this.name + '!');
+            alert('You just downloaded' + ' '+ this.name.toUpperCase() + '!');
         },
         editBtn () {
             this.$router.push('/builder');
         },
         deleteBtn (name) {
-            alert('You just deleted' + ' '+ this.name + '!');
+            alert('You just deleted' + ' '+ this.name.toUpperCase() + '!');
         }
     }
     

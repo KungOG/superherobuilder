@@ -3,7 +3,7 @@
         <div class="home-page-content-1" id="power-page">
             <div class="content-header">
                 <h2>Super Name:</h2>
-                <input v-model="name" >
+                <input v-model="name" autofocus>
             </div>
 
             <img v-if="headImg == 1" src="@/assets/img/h1.png" alt="Head image">
