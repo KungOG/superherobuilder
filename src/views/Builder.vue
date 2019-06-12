@@ -1,6 +1,6 @@
 <template>
   <main class="build">
-    <section class="build-page-content-1">
+    <section class="build-page-content-1" :style="{'margin-right': contentOneMargin}">
         <div class="build-page-content-1-div">
             <p class="build-page-content-1-text">GENDER </p>
             <a class="build-page-content-1-gender">&#9794;</a>
@@ -15,10 +15,10 @@
         </div>
         <div class="build-page-content-1-div">
             <p class="build-page-content-1-text">BODY </p>
-            <img class="build-page-content-1-body" src="@/assets/img/body4.png">
-            <img class="build-page-content-1-body" src="@/assets/img/body3.png">
-            <img class="build-page-content-1-body" src="@/assets/img/body2.png">
-            <img class="build-page-content-1-body" src="@/assets/img/body1.png">
+            <img @click="bodySizePicker(4)" class="build-page-content-1-body" src="@/assets/img/body4.png">
+            <img @click="bodySizePicker(3)" class="build-page-content-1-body" src="@/assets/img/body3.png">
+            <img @click="bodySizePicker(2)" class="build-page-content-1-body" src="@/assets/img/body2.png">
+            <img @click="bodySizePicker(1)" class="build-page-content-1-body" src="@/assets/img/body1.png">
         </div>
         <a @click="bodyNumbers()" class="btn">
             <router-link to="/power">
@@ -31,25 +31,25 @@
         <div class="build-page-content-2-img-container">
             <div class="build-page-content-2-img-body-seperator">
                 <a class="build-page-content-2-img-selector" @click="hBackForward = 1, headImgScroller()">&#60;</a>
-                <img v-show="hImgNumber == 1" class="build-page-content-2-img head" src="../assets/img/h1.png" alt="">
-                <img v-show="hImgNumber == 2" class="build-page-content-2-img head" src="../assets/img/h2.png" alt="">
-                <img v-show="hImgNumber == 3" class="build-page-content-2-img head" src="../assets/img/h3.png" alt="">
+                <img v-show="hImgNumber == 1" class="build-page-content-2-img head" :style="{width: hWidth}" src="../assets/img/h1.png" alt="">
+                <img v-show="hImgNumber == 2" class="build-page-content-2-img head" :style="{width: hWidth}" src="../assets/img/h2.png" alt="">
+                <img v-show="hImgNumber == 3" class="build-page-content-2-img head" :style="{width: hWidth}" src="../assets/img/h3.png" alt="">
                 <a class="build-page-content-2-img-selector" @click="hBackForward = 2, headImgScroller()">&gt;</a>
             </div>
 
             <div class="build-page-content-2-img-body-seperator">
                 <a class="build-page-content-2-img-selector" @click="bBackForward = 1, bodyImgScroller()">&#60;</a>
-                <img v-show="bImgNumber == 1" class="build-page-content-2-img body" src="../assets/img/b1.png" alt="">
-                <img v-show="bImgNumber == 2" class="build-page-content-2-img body" src="../assets/img/b2.png" alt="">
-                <img v-show="bImgNumber == 3" class="build-page-content-2-img body" src="../assets/img/b3.png" alt="">
+                <img v-show="bImgNumber == 1" class="build-page-content-2-img body" :style="{width: width}" src="../assets/img/b1.png" alt="">
+                <img v-show="bImgNumber == 2" class="build-page-content-2-img body" :style="{width: width}" src="../assets/img/b2.png" alt="">
+                <img v-show="bImgNumber == 3" class="build-page-content-2-img body" :style="{width: width}" src="../assets/img/b3.png" alt="">
                 <a class="build-page-content-2-img-selector" @click="bBackForward = 2, bodyImgScroller()">&gt;</a>
             </div>
 
             <div class="build-page-content-2-img-body-seperator">
                 <a class="build-page-content-2-img-selector" @click="lBackForward = 1, legImgScroller()">&#60;</a>
-                <img v-show="lImgNumber == 1" class="build-page-content-2-img legs" src="../assets/img/l1.png" alt="">
-                <img v-show="lImgNumber == 2" class="build-page-content-2-img legs" src="../assets/img/l2.png" alt="">
-                <img v-show="lImgNumber == 3" class="build-page-content-2-img legs" src="../assets/img/l3.png" alt="">
+                <img v-show="lImgNumber == 1" class="build-page-content-2-img" :style="{width: width}" src="../assets/img/l1.png" alt="">
+                <img v-show="lImgNumber == 2" class="build-page-content-2-img" :style="{width: width}" src="../assets/img/l2.png" alt="">
+                <img v-show="lImgNumber == 3" class="build-page-content-2-img" :style="{width: width}" src="../assets/img/l3.png" alt="">
                 <a class="build-page-content-2-img-selector" @click="lBackForward = 2, legImgScroller()">&gt;</a>
             </div>
         </div>
@@ -70,7 +70,10 @@ export default {
             bBackForward: 1,
             lBackForward: 1,
             imgUrl: '../assets/img/b.png',
-            lengthNumber: 180
+            lengthNumber: 180,
+            width: 20 + 'rem',
+            hWidth: 20 + 'rem',
+            contentOneMargin: 0
         }
     },
 
@@ -131,6 +134,26 @@ export default {
             this.$store.commit('setHeadNumber', this.hImgNumber);
             this.$store.commit('setBodyNumber', this.bImgNumber);
             this.$store.commit('setLegNumber', this.lImgNumber);
+        },
+
+        bodySizePicker(size) {
+            if(size == 4) {
+                this.hWidth = 19 + 'rem';
+                this.width = 19 + 'rem';
+                this.contentOneMargin = 1 + 'rem';
+            } else if(size == 3) {
+                this.contentOneMargin = 0;
+                this.hWidth = 20 + 'rem';
+                this.width = 20 + 'rem';
+            } else if(size == 2) {
+                this.contentOneMargin = -1 + 'rem';
+                this.hWidth = 20 + 'rem';
+                this.width = 21 + 'rem';
+            } else if(size == 1) {
+                this.contentOneMargin = -2 + 'rem';
+                this.hWidth = 21 + 'rem';
+                this.width = 22 + 'rem';
+            }
         }
     }
 
