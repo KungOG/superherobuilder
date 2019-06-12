@@ -20,12 +20,12 @@
             <img @click="bodySizePicker(2)" class="build-page-content-1-body" src="@/assets/img/body2.png">
             <img @click="bodySizePicker(1)" class="build-page-content-1-body" src="@/assets/img/body1.png">
         </div>
-        <a @click="bodyChosen()" class="btn">
-            <router-link to="/power">
+        <router-link to="/power">
+            <a @click="bodyChosen()" class="btn">
                 Step two
                 <span>&gt;</span>
-            </router-link>
-        </a>
+            </a>
+        </router-link>
     </section>
     <section class="build-page-content-2">
         <div class="build-page-content-2-img-container">
@@ -84,7 +84,6 @@
 <script>
 export default {
   name: "builder",
-
     data() {
         return {
             hImgNumber: 1,
