@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     headNumber: 1,
     bodyNumber: 2,
-    legNumber: 3
+    legNumber: 3,
   },
   mutations: {
     setHeadNumber(state, number) {
@@ -19,7 +19,7 @@ export default new Vuex.Store({
     setLegNumber(state, number) {
       state.legNumber = number;
     },
-
+    
   },
   actions: {
 
@@ -34,6 +34,6 @@ export default new Vuex.Store({
     },
     getLegNumber(state) {
       return state.legNumber;
-    },
+    }
   }
 })
