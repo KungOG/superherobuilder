@@ -44,6 +44,11 @@ main {
         padding: 0 1rem;
         cursor: pointer;
     }
+
+    .selector-mobile {
+        display: none;
+    }
+
     .content-1 {
         flex: 1;
         @extend %center;
@@ -176,6 +181,20 @@ main {
     
             .content-1 {
                 padding: 0;
+
+                & > :nth-child(1), & > :nth-child(5) {
+                    display: flex;
+                }
+
+                .selector-mobile {
+                    display: flex;
+                    font-size: 2em;
+                    margin: 0 2rem;
+                }
+
+                h1 {
+                    display: inline;
+                }
             
                 .pros, .cons {
                     width: 80vw;

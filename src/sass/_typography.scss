@@ -19,6 +19,6 @@ a {
     transition: color .3s ease-out;
 
     &:hover {
-        color: white;
+        color: white !important;
     }
 }

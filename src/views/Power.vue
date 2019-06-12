@@ -16,20 +16,34 @@
             <img v-if="legImg == 2" src="@/assets/img/l2.png" alt="Leg image">
             <img v-if="legImg == 3" src="@/assets/img/l3.png" alt="Leg image">
         </div>
-            <a class="selector">&#60;</a>
+
+        <a @click="decPowers()" class="selector">&#60;</a>
+
         <div class="content-1">
-            <h1>The Sizzler</h1>
+            <div>
+            <a @click="decPowers()" class="selector-mobile">&#60;</a>
+                <h1 v-show="powerCount == 1">The Sizzler</h1>
+                <h1 v-show="powerCount == 2">The Fizzler</h1>
+                <h1 v-show="powerCount == 3">The Dizzler</h1>
+            <a @click="incPowers()" class="selector-mobile">&gt;</a>
+            </div>
             <div class="pros">
-                <h2>Magic</h2>
+                <h2 v-show="powerCount == 1">Magic</h2>
+                <h2 v-show="powerCount == 2">Invisibility</h2>
+                <h2 v-show="powerCount == 3">Time travel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit sollicitudin magna id consectetur. 
                    Praesent ornare nunc eget odio dignissim, id ullamcorper nulla lobortis.</p>
                 <hr>
-                <h2>Flying</h2>
+                <h2 v-show="powerCount == 1">Flying</h2>
+                <h2 v-show="powerCount == 2">Mind reading</h2>
+                <h2 v-show="powerCount == 3">Speed</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit sollicitudin magna id consectetur. 
                    Praesent ornare nunc eget odio dignissim, id ullamcorper nulla lobortis.</p>
             </div>
             <div class="cons">
-                <h2>Sleepy</h2>
+                <h2 v-show="powerCount == 1">Sleepy</h2>
+                <h2 v-show="powerCount == 2">Yawning</h2>
+                <h2 v-show="powerCount == 3">Dizzy</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit sollicitudin magna id consectetur. 
                    Praesent ornare nunc eget odio dignissim, id ullamcorper nulla lobortis.</p>
             </div>
@@ -39,13 +53,31 @@
                 </a>
             </router-link>
         </div>
-            <a class="selector">&gt;</a>
+        <a @click="incPowers()" class="selector">&gt;</a>
     </main>
 </template>
 
 <script>
 export default {
     name: 'power',
+    data() {
+        return {
+            powerCount: 1
+        }
+    },
+
+    methods: {
+        incPowers() {
+            if(this.powerCount == 1 || this.powerCount == 2) {
+                this.powerCount++;
+            }
+        },
+        decPowers() {
+            if(this.powerCount == 2 || this.powerCount == 3) {
+                this.powerCount--;
+            }
+        }
+    },
 
     computed: {
         headImg() {
@@ -56,7 +88,10 @@ export default {
         },
         legImg() {
             return this.$store.getters.getLegNumber
-        }
+        },
+/*         powerCounter() {
+             return this.$store.getters.powerCounter
+        } */
     }
 }
 </script>
