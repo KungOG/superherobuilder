@@ -30,14 +30,12 @@
         }
         .middle-content {
             grid-area: middle-content;
+
             .showcast {
                 grid-area: showcast;
                 margin: 1rem;
-
             }
             .circle {
-              
-                padding: 1rem;
                 grid-area: circle;
 
             }
@@ -47,25 +45,30 @@
             grid-template-columns: repeat(3, 1fr);
             grid-auto-rows: auto;
             grid-template-areas:
-            'downloadbtn editbtn deletebtn';
+            'downloadbtn downloadbtn downloadbtn' 
+            'editbtn editbtn editbtn' 
+            'deletebtn deletebtn deletebtn';
 
             .download-btn {
                 grid-area:  downloadbtn;
                 text-align: center;
-                padding: 1rem;
+                border-radius: 0;
+                padding: 1.1rem;
                 font-size: 1rem;
             }
             .edit-btn {
                 grid-area: editbtn;
                 text-align: center;
-                padding: 1rem;
+                border-radius: 0;
+                padding: 1.1rem;
                 font-size: 1rem;
                      
             }
             .delete-btn {
                 grid-area: deletebtn;
                 text-align: center;
-                padding: 1rem;
+                border-radius: 0;
+                padding: 1.1rem;
                 font-size: 1rem;
     
             }

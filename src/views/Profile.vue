@@ -42,6 +42,10 @@ export default {
         },
         deleteBtn (name) {
             alert('You just deleted' + ' '+ this.name.toUpperCase() + '!');
+            this.$router.push('/');
+            setTimeout(() => {
+                window.location.reload(false);
+            })
         }
     }
     
