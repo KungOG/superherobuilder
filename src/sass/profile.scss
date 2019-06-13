@@ -45,6 +45,7 @@
     .middle-content {
         display: grid;
         justify-content: space-evenly;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         grid-template-areas: 
         '. showcast .'
@@ -78,6 +79,7 @@
     .profile-btns {
         display: grid;
         justify-content: space-evenly;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         grid-template-areas: 
         'downloadbtn editbtn deletebtn';
