@@ -261,7 +261,6 @@
 <script>
 export default {
   name: "builder",
-
   data() {
     return {
       hImgNumber: 1,

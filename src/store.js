@@ -8,7 +8,8 @@ export default new Vuex.Store({
     headNumber: 1,
     bodyNumber: 2,
     legNumber: 3,
-    femaleOrMale: 'f'
+    femaleOrMale: 'f',
+    name:""
   },
   mutations: {
     setHeadNumber(state, number) {
@@ -22,6 +23,9 @@ export default new Vuex.Store({
     },
     setFemaleOrMale(state, sex) {
       state.femaleOrMale = sex;
+    },
+    setName(state, name) {
+      state.name = name;
     }
   },
   actions: {
@@ -40,6 +44,9 @@ export default new Vuex.Store({
     },
     getFemaleOrMale(state) {
       return state.femaleOrMale;
+    },
+    name(state) {
+      return state.name;
     }
   }
 })

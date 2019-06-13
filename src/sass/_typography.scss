@@ -13,12 +13,13 @@ p, span {
     font-family: 'Roboto', Arial, sans-serif;
 }
 
+
 a {
     color: black;
     text-decoration: none;
     transition: color .3s ease-out;
 
     &:hover {
-        color: white;
+        color: white !important;
     }
 }

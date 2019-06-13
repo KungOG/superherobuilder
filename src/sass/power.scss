@@ -38,12 +38,21 @@ main {
         }
     }
 
+    .btn-tablet {
+        display: none;
+    }
+
     .selector {
         font-size: 3rem;
         font-weight: 900;
         padding: 0 1rem;
         cursor: pointer;
     }
+
+    .selector-mobile {
+        display: none;
+    }
+
     .content-1 {
         flex: 1;
         @extend %center;
@@ -99,38 +108,49 @@ main {
 }
 
     // Tablet
-    @media only screen and (min-width: 500px) and (max-width: 768px) {
+    @media only screen and (min-width: 500px) and (max-width: 768px)and (min-height: 1024px) {
         main {
 
-        .content-header, input {
-            margin-left: 1rem;
-        }
-            
-
-        .content-1 {
-            margin-top: 5rem;
-
-
-            .pros, .cons {
-                max-width: 320px;
-                position: relative;
+            .home-page-content-1 {
+                margin-top: -5rem;
             }
 
-            .btn {
-                text-align: center;
+            p {
+                font-size: 1.15em;
+            }
+
+            .content-header, input {
+                margin-left: 1rem;
+            }
+                
+            .content-1 {
+                margin-top: 3rem;
+
+                .cons {
+                    margin-top: 1.5rem;
+                }
+
+                .pros, .cons {
+                    max-width: 320px;
+                    position: relative;
+                }
+
+                .btn {
+                    display: none;
+                }
+
+            }
+            
+            .btn-tablet {
                 position: absolute;
-                bottom: 20px;
-                padding: 1.5rem;
-                width: 13rem;
+                justify-content: center;
+                display: flex;
+                bottom: 1.4rem;
                 right: 0;
+                width: 4rem;
                 left: 0;
             }
 
-        }
-
-        .msg {
-          width: 400px;
-        }
       }
     }
 
@@ -176,6 +196,16 @@ main {
     
             .content-1 {
                 padding: 0;
+
+                & > :nth-child(1), & > :nth-child(5) {
+                    display: flex;
+                }
+
+                .selector-mobile {
+                    display: flex;
+                    font-size: 2em;
+                    margin: 0 2rem;
+                }
             
                 .pros, .cons {
                     width: 80vw;
