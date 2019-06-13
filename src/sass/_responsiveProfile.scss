@@ -1,3 +1,14 @@
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .content {
+        margin-top: 2rem;
+
+        .home-page-content-2 { 
+            padding: 4rem;
+        }
+    }
+}
+
+
 @media screen and (max-width: 480px) {
 
     .content {

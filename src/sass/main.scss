@@ -171,12 +171,11 @@ body {
   }
 
   // Tablet
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 500px) and (max-width: 768px) {
     #app {
 
       .home {
         flex-direction: column;
-        margin-top: 2rem;
         
         .home-page-content-1 {
           padding: 0;
