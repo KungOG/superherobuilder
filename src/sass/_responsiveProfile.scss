@@ -2,63 +2,71 @@
 
     .content {
         display: grid;
-        grid-template-rows: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
         grid-template-areas:
-        '. headline .',
-        '. img .',
-        '. showcast .',
-        '. circle .',
-        'downloadbtn editbtn deletebtn';
+        'headline headline headline'
+        'img img img'
+        'middle-content middle-content middle-content'
+        'profile-btns profile-btns profile-btns' 
+        'profile-btns profile-btns profile-btns' 
+        'profile-btns profile-btns profile-btns';
 
         .headline {
             grid-area: headline;
-            background: green;
-
+            text-align: center;
+            font-size: 1rem;
+            margin: 2rem 0;
         }
         .home-page-content-2 {
             grid-area: img;
-            background: yellow;
 
             &:nth-last-child(1) {
-                
-                background: orange;
                 
             }
             &:nth-child(2) {
 
-                background: pink;
-
             }
         }
         .middle-content {
-           
+            grid-area: middle-content;
             .showcast {
                 grid-area: showcast;
-                background: darkblue;
+                margin: 1rem;
 
             }
             .circle {
+              
+                padding: 1rem;
                 grid-area: circle;
-                background: darkgreen;
 
             }
         }
         .profile-btns {
-            display: grid;
+            grid-area: profile-btns;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: auto;
+            grid-template-areas:
+            'downloadbtn editbtn deletebtn';
 
             .download-btn {
-                grid-area: downloadbtn;
-                background: darkred;
-    
+                grid-area:  downloadbtn;
+                text-align: center;
+                padding: 1rem;
+                font-size: 1rem;
             }
             .edit-btn {
                 grid-area: editbtn;
-                background: black;
-                
+                text-align: center;
+                padding: 1rem;
+                font-size: 1rem;
+                     
             }
             .delete-btn {
                 grid-area: deletebtn;
-                background: white;
+                text-align: center;
+                padding: 1rem;
+                font-size: 1rem;
     
             }
         }
