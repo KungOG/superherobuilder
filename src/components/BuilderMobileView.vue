@@ -48,14 +48,14 @@
           <a
             class="build-page-content-mobile-content-body-selector"
             @click="hBackForward = 2, headImgScroller()"
-          >&gt;</a>
+          >&#10095;</a>
         </div>
 
         <div v-show="femaleOrMale == 'm'" class="build-page-content-mobile-content-body-img-seperator">
           <a
             class="build-page-content-mobile-content-body-selector"
             @click="bBackForward = 1, bodyImgScroller()"
-          >&#60;</a>
+          >&#10094;</a>
           <img
             v-show="bImgNumber == 1"
             class="build-page-content-mobile-content-body-img body"
@@ -80,14 +80,14 @@
           <a
             class="build-page-content-mobile-content-body-selector"
             @click="bBackForward = 2, bodyImgScroller()"
-          >&gt;</a>
+          >&#10095;</a>
         </div>
 
-        <div v-show="femaleOrMale == 'm'" class="build-page-content-mobile-content-body-img-seperator">
+        <div v-show="femaleOrMale == 'm'" class="build-page-content-mobile-content-body-img-seperator leg">
           <a
             class="build-page-content-mobile-content-body-selector"
             @click="lBackForward = 1, legImgScroller()"
-          >&#60;</a>
+          >&#10094;</a>
           <img
             v-show="lImgNumber == 1"
             class="build-page-content-mobile-content-body-img"
@@ -112,14 +112,14 @@
           <a
             class="build-page-content-mobile-content-body-selector"
             @click="lBackForward = 2, legImgScroller()"
-          >&gt;</a>
+          >&#10095;</a>
         </div>
 
         <div v-show="femaleOrMale == 'f'" class="build-page-content-mobile-content-body-img-seperator">
           <a
             class="build-page-content-mobile-content-body-selector"
             @click="hBackForward = 1, headImgScroller()"
-          >&#60;</a>
+          >&#10094;</a>
           <img
             v-show="hImgNumber == 1"
             class="build-page-content-mobile-content-body-img head"
@@ -144,14 +144,14 @@
           <a
             class="build-page-content-mobile-content-body-selector"
             @click="hBackForward = 2, headImgScroller()"
-          >&gt;</a>
+          >&#10095;</a>
         </div>
 
         <div v-show="femaleOrMale == 'f'" class="build-page-content-mobile-content-body-img-seperator">
           <a
             class="build-page-content-mobile-content-body-selector"
             @click="bBackForward = 1, bodyImgScroller()"
-          >&#60;</a>
+          >&#10094;</a>
           <img
             v-show="bImgNumber == 1"
             class="build-page-content-mobile-content-body-img body"
@@ -176,14 +176,14 @@
           <a
             class="build-page-content-mobile-content-body-selector"
             @click="bBackForward = 2, bodyImgScroller()"
-          >&gt;</a>
+          >&#10095;</a>
         </div>
 
-        <div v-show="femaleOrMale == 'f'" class="build-page-content-mobile-content-body-img-seperator">
+        <div v-show="femaleOrMale == 'f'" class="build-page-content-mobile-content-body-img-seperator leg">
           <a
             class="build-page-content-mobile-content-body-selector"
             @click="lBackForward = 1, legImgScroller()"
-          >&#60;</a>
+          >&#10094;</a>
           <img
             v-show="lImgNumber == 1"
             class="build-page-content-mobile-content-body-img"
@@ -208,7 +208,7 @@
           <a
             class="build-page-content-mobile-content-body-selector"
             @click="lBackForward = 2, legImgScroller()"
-          >&gt;</a>
+          >&#10095;</a>
         </div>
       </div>
       <div class="build-page-content-mobile-content-length">

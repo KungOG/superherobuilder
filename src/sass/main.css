@@ -934,12 +934,25 @@ main .content-1 .cons p {
   width: 20rem;
 }
 
+.build .build-page-content-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .build .build-page-content-mobile .build-page-content-mobile-gender {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 18rem;
-  margin: .5rem;
+  margin: 1rem 0 2rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -948,7 +961,7 @@ main .content-1 .cons p {
   font-weight: 700;
   font-size: 1.3rem;
   padding: 0;
-  margin: .4rem 0 0;
+  margin: 0.4rem 0 0;
 }
 
 .build .build-page-content-mobile .build-page-content-mobile-gender .build-page-content-mobile-symbol {
@@ -965,6 +978,9 @@ main .content-1 .cons p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-size {
@@ -975,42 +991,159 @@ main .content-1 .cons p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  width: 5rem;
-  margin: 0 0 0 -1rem;
-  padding: 0;
+  margin: 0;
+  padding: 0 0.2rem 0 0;
 }
 
 .build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-size .build-page-content-mobile-content-size-text {
   font-weight: 1.3rem;
   font-weight: 700;
-  margin: 1rem 0 .5rem;
+  margin: 1rem 0 0.5rem;
 }
 
 .build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-size .build-page-content-mobile-content-size-body {
-  margin: 0 0 0 -1rem;
   width: 3rem;
-  height: auto;
   cursor: pointer;
 }
 
 .build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-body {
-  width: 15rem;
+  width: 13rem;
+  padding: .5rem 0;
+  background: rgba(0, 0, 0, 0.24);
+  border-radius: 2rem;
+  margin: 0 .7rem;
 }
 
 .build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-body .build-page-content-mobile-content-body-img-seperator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-body .build-page-content-mobile-content-body-img-seperator.leg {
+  border: none;
+}
+
+.build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-body .build-page-content-mobile-content-body-img-seperator .build-page-content-mobile-content-body-selector {
+  font-size: 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  z-index: 20;
 }
 
 .build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-body .build-page-content-mobile-content-body-img-seperator .build-page-content-mobile-content-body-img {
-  width: 5rem;
+  width: 13rem;
+  margin: 0 -2rem;
+}
+
+.build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-length {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-length .content-length-text {
+  font-weight: 700;
+  padding-right: 0;
+}
+
+.build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-length .build-page-content-mobile-content-length-slidecontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 5rem -4rem 0 -6rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-length .build-page-content-mobile-content-length-slidecontainer .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1rem;
+  border-radius: 1rem;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  -webkit-transform-origin: 75px 75px;
+          transform-origin: 75px 75px;
+  direction: rtl;
+}
+
+.build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-length .build-page-content-mobile-content-length-slidecontainer .slider.slider:hover {
+  opacity: 1;
+}
+
+.build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-length .build-page-content-mobile-content-length-slidecontainer .slider.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #00aeed;
+  cursor: pointer;
+}
+
+.build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-length .build-page-content-mobile-content-length-slidecontainer .slider.slider::-moz-range-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #00aeed;
+  cursor: pointer;
+}
+
+.build .build-page-content-mobile .build-page-content-mobile-content .build-page-content-mobile-content-length .build-page-content-mobile-content-length-slidecontainer p {
+  margin: 0;
+  padding: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  text-align: right;
+}
+
+.build .build-page-content-mobile .build-page-content-mobile-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.build .build-page-content-mobile .build-page-content-mobile-button .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #E54626;
+  text-decoration: none;
+  width: 100%;
+  color: black;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 2rem 0;
 }
 
 :root {
