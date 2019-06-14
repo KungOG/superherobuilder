@@ -320,14 +320,17 @@ body {
     @media only screen and (max-width: 321px) {
       #app {
         .home{
-          .home-page-content-text {
-    
-            p {
-              margin: 0 1.2rem;
-              width: 90%;
+          padding: 0;
+          .home-page-content-1{
+              padding: .5rem;
+            .home-page-content-text {
+              p {
+                margin: 0 1.2rem;
+                width: 90%;
+              }
             }
+            
           }
-
         }
       }
     }
