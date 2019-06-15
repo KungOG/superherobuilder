@@ -9,7 +9,7 @@ export default new Vuex.Store({
     bodyNumber: 2,
     legNumber: 3,
     femaleOrMale: 'f',
-    name:""
+    name: "Superman"
   },
   mutations: {
     setHeadNumber(state, number) {

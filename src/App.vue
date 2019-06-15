@@ -2,18 +2,21 @@
   <div id="app">
     <div id="nav">
       <Slide id="slide">
-        <router-link to="/">Home</router-link>
-        <router-link to="/builder">Builder</router-link>
-        <router-link to="/power">Power</router-link> 
-        <router-link to="/contact">Contact</router-link> 
-        <router-link to="/profile">Profile</router-link>
         <div class="my-superheroes">
           <span>My superheroes</span>
           <img src="@/assets/img/user.png" alt="superheroes" />
         </div>
+        <router-link to="/profile">
+          <span class="heroProfile">
+            - {{ name }}
+          </span>
+        </router-link>
+        <router-link to="/contact">Contact</router-link> 
       </Slide>
         <p id="login-mobile">Login</p>
-        <h1 class="red-bar">SUPERHEROES</h1>
+        <router-link to="/">
+          <h1 class="red-bar">SUPERHEROES</h1>
+        </router-link>
         <p id="login">Login</p>
     </div>
     <router-view/>
@@ -26,7 +29,12 @@ export default {
   name: 'app',
   components : {
     Slide
-  }
+  },
+  computed: {
+    name() {
+        return this.$store.getters.name
+    }
+  },
 }
 </script>
 

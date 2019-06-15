@@ -68,7 +68,7 @@ export default {
     name: 'power',
     data(){
         return {
-            name:"",
+            name: "",
             powerCount: 1
         }
     },

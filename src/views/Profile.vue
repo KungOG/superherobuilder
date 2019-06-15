@@ -33,13 +33,12 @@
 <script>
 export default {
     name: 'profile',
-        computed: {
+    computed: {
         name() {
             return this.$store.getters.name
         }
-        },
-
-    methods : {
+    },
+    methods: {
         downloadBtn (name) {
             alert('You just downloaded' + ' '+ this.name.toUpperCase() + '!');
         },
