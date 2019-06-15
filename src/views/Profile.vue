@@ -7,7 +7,7 @@
             <div class="a">
                 <img src="../assets/img/1.png" alt="?">
             </div>
-            <div class="b">
+            <div class="b active">
                 <img src="../assets/img/1.png" alt="?">
             </div>
             <div class="c">

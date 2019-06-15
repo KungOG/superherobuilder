@@ -11,12 +11,12 @@
 
 @media screen and (max-width: 480px) {
 body {
-    width: 100vv;
+    width: 100vw;
     height: 100vh;
     .content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 80px 150px 100px auto;
+        grid-auto-rows: 80px 200px 100px auto;
         grid-template-areas:
         'headline headline headline'
         'img img img'
@@ -27,46 +27,31 @@ body {
             grid-area: headline;
             text-align: center;
             font-size: 1rem;
-            margin: 2rem 0;
+            margin: 0;
+
         }
         .home-page-content-2 {
+            grid-area: img;
             .a img {
-                width: 75px;
-                height: 75px;
+                width: 100px;
+                height: 100px;
             }
             .b img {
-                width: 75px;
-                height: 75px;
+                width: 100px;
+                height: 100px;
             }
             .c img {
-                width: 75px;
-                height: 75px;
+                width: 100px;
+                height: 100px;
             }
-            @keyframes first {
-                0% {left: -20px; opacity: .3; transform: scale(1);}
-                33%  {left: 55px; opacity: 1;transform: scale(2);}
-                66%  {left: 130px; opacity: .3;transform: scale(1);}
-                100%  {left: -20px; opacity: .3;transform: scale(1);}
-            }
-            @keyframes secund {
-                0% {left: -95px; opacity: .3; transform: scale(1);}
-                33%  {left: -20px; opacity: 1;transform: scale(2);}
-                66%  {left: 55px; opacity: .3;transform: scale(1);}
-                100%  {left: -95px; opacity: .3;transform: scale(1);}
-            }
-            @keyframes third {
-                0% {left: -170px; opacity: .3; transform: scale(1);}
-                33%  {left: -95px; opacity: 1;transform: scale(2);}
-                66%  {left: -20px; opacity: .3;transform: scale(1);}
-                100%  {left: -170px; opacity: .3;transform: scale(1);}
-            }
+  
           }
           .middle-content {
               grid-area: middle-content;
               
               .showcast {
                   grid-area: showcast;
-                  margin: 1rem;
+                  margin: 3rem 1rem 1rem 1rem;
                 }
                 .circle {
                     grid-area: circle;
