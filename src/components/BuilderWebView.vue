@@ -47,12 +47,12 @@
           src="@/assets/img/body1.png"
         >
       </div>
-      <a @click="bodyChosen()" class="btn">
         <router-link to="/power">
-          Step two
-          <span>&gt;</span>
+          <a @click="bodyChosen()" class="btn">
+            Step two
+            <span>&gt;</span>
+          </a>
         </router-link>
-      </a>
     </section>
     <section class="build-page-content-2">
       <div class="build-page-content-2-img-container">

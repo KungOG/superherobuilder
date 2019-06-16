@@ -8,7 +8,7 @@
         </div>
         <router-link to="/profile">
           <span class="heroProfile">
-            - {{ name }}
+            - {{ name.charAt(0).toUpperCase() + name.slice(1) }}
           </span>
         </router-link>
         <router-link to="/contact">Contact</router-link> 
@@ -33,7 +33,12 @@ export default {
   computed: {
     name() {
         return this.$store.getters.name
+    },
+  methods: {
+    googleLogin() {
+        alert('You have signed in with Google!');
     }
+  }
   },
 }
 </script>
