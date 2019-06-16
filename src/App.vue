@@ -13,11 +13,11 @@
         </router-link>
         <router-link to="/contact">Contact</router-link> 
       </Slide>
-        <p id="login-mobile">Login</p>
+        <a @click="googleLogin()" id="login-mobile">{{ login }}</a>
         <router-link to="/">
           <h1 class="red-bar">SUPERHEROES</h1>
         </router-link>
-        <a @click="googleLogin" id="login">Login</a>
+        <a @click="googleLogin()" id="login">{{ login }}</a>
     </div>
     <router-view/>
   </div>
@@ -27,6 +27,11 @@
 import { Slide } from 'vue-burger-menu'
 export default {
   name: 'app',
+  data() {
+    return {
+      login: 'Login'
+    }
+  },
   components : {
     Slide
   },
@@ -37,7 +42,13 @@ export default {
   },
   methods: {
     googleLogin() {
+      if (this.login != 'Logout') {
         alert('You have signed in with Google!');
+        this.login = 'Logout';
+      } else {
+        alert('You have logged out. May the force be with you.');
+        this.login = 'Login';
+      }
     }
   }
 }
