@@ -17,7 +17,7 @@
         <router-link to="/">
           <h1 class="red-bar">SUPERHEROES</h1>
         </router-link>
-        <p id="login">Login</p>
+        <a @click="googleLogin" id="login">Login</a>
     </div>
     <router-view/>
   </div>
@@ -34,12 +34,12 @@ export default {
     name() {
         return this.$store.getters.name
     },
+  },
   methods: {
     googleLogin() {
         alert('You have signed in with Google!');
     }
   }
-  },
 }
 </script>
 
