@@ -2,6 +2,7 @@
   <div id="app">
     <div id="nav">
       <Slide id="slide">
+        <router-link to="/">Home</router-link> 
         <div class="my-superheroes">
           <span>My superheroes</span>
           <img src="@/assets/img/user.png" alt="superheroes" />
