@@ -120,7 +120,8 @@ main {
             }
 
             .content-header, input {
-                margin-left: 1rem;
+                margin-left: 0rem;
+                margin-right: -1rem;
             }
                 
             .content-1 {
@@ -151,6 +152,16 @@ main {
                 left: 0;
             }
 
+            .selector {
+
+                &.left {
+                    margin-right: -1rem;
+                }
+
+                &.right {
+                    margin-left: -1rem;
+                }
+            }
       }
     }
 

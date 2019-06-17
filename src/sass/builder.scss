@@ -282,83 +282,33 @@
     }
   }
 }
-// @media only screen and (max-width: 499px) {
-//   .build {
-//     .build-page-content-1 {
-//       .build-page-content-1-div {
-//         &.gender {
-//           margin: 0 0 0 13rem;
-//           background: none;
-//           z-index: 1000;
-//         }
 
-//         &.length {
-//           transform: rotate(-90deg);
-//           flex-direction: row-reverse;
-//           background: none;
-//           margin-top: 10rem;
-//           margin-left: 21rem;
-//           z-index: 1000;
+@media only screen and (max-width: 1024px) {
+  
+  .build {
+    margin-top: 5rem;
+  }
+}
 
-//           .build-page-content-1-text {
-//             font-size: 1rem;
-//             transform: rotate(90deg);
-//             margin: 0;
-//           }
+@media only screen and (max-height: 830px) {
+  .build {
+    margin-top: 2rem;
+  }
+}
 
-//           .build-page-content-1-length-slidecontainer {
-//             height: 100%;
+@media only screen and (max-height: 760px) {
+  .build {
+    margin-top: 2rem;
+  }
+}
 
-//             input {
-//               transform-origin: 75px 75px;
-//             }
-//           }
-//         }
+@media only screen and (max-height: 680px) {
 
-//         &.body {
-//           flex-direction: column;
-//           width: 3rem;
-//           margin: -200px 7.5rem;
-//           background: none;
+  .build {
+    margin-top: 0 !important;
 
-//           .build-page-content-1-text {
-//             font-size: 1rem;
-//             text-align: right
-//           }
-//           .build-page-content-1-body {
-//             height: auto;
-//             padding: 0;
-//           }
-//         }
-//       }
-//     }
-
-//     .build-page-content-2 {
-//       width: 10rem;
-
-//       .build-page-content-2-img-container {
-//         margin-top: -5rem;
-
-//         .build-page-content-2-img-body-seperator {
-//           .build-page-content-2-img-selector {
-//             margin: -90px;
-//             font-size: 4rem;
-//             z-index: 1200;
-//           }
-//         }
-//       }
-
-//       .btn {
-//           background: $orange;
-//           text-decoration: none;
-//           display: flex;
-//           justify-content: center;
-//           width: 100vw;
-//           color: black;
-//           border-radius: 0;
-//           margin: 0 -11.5rem;
-
-//       }
-//     }
-//   }
-// }
+    .btn {
+      padding: 1rem 0 !important; 
+    }
+  }
+}

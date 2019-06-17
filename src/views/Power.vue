@@ -1,6 +1,6 @@
 <template>
     <main>
-        <div class="home-page-content-1" id="power-page">
+        <div v-if="this.$store.state.femaleOrMale == 'm'" class="home-page-content-1" id="power-page">
             <div class="content-header">
                 <h2>Super Name:</h2>
                 <input v-model="name" autofocus>
@@ -16,8 +16,24 @@
             <img v-if="legImg == 2" src="@/assets/img/l2.png" alt="Leg image">
             <img v-if="legImg == 3" src="@/assets/img/l3.png" alt="Leg image">
         </div>
+        <div v-else-if="this.$store.state.femaleOrMale == 'f'" class="home-page-content-1" id="power-page">
+            <div class="content-header">
+                <h2>Super Name:</h2>
+                <input v-model="name" autofocus>
+            </div>
 
-        <a @click="decPowers()" class="selector">&#60;</a>
+            <img v-if="headImg == 1" src="@/assets/img/fh1.png" alt="Head image">
+            <img v-if="headImg == 2" src="@/assets/img/fh2.png" alt="Head image">
+            <img v-if="headImg == 3" src="@/assets/img/fh3.png" alt="Head image">
+            <img v-if="bodyImg == 1" src="@/assets/img/fb1.png" alt="Body image">
+            <img v-if="bodyImg == 2" src="@/assets/img/fb2.png" alt="Body image">
+            <img v-if="bodyImg == 3" src="@/assets/img/fb3.png" alt="Body image">
+            <img v-if="legImg == 1" src="@/assets/img/fl1.png" alt="Leg image">
+            <img v-if="legImg == 2" src="@/assets/img/fl2.png" alt="Leg image">
+            <img v-if="legImg == 3" src="@/assets/img/fl3.png" alt="Leg image">
+        </div>
+
+        <a @click="decPowers()" class="selector left">&#60;</a>
 
         <div class="content-1">
             <div>
@@ -54,7 +70,7 @@
             </router-link>
         </div>
 
-        <a @click="incPowers()" class="selector">&gt;</a>
+        <a @click="incPowers()" class="selector right">&gt;</a>
         <router-link to="/profile">
             <a class="btn-tablet">
                 Done
