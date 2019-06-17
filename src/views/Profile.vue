@@ -16,11 +16,6 @@
         </section>
         <section class="middle-content">
             <h3 class="showcast">{{ name }}</h3>
-            <ul class="circle">
-                <li></li>
-                <li class="active"></li>
-                <li></li>
-            </ul>
         </section>
         <section class="profile-btns">
             <a href="#" class="download-btn" @click="downloadBtn">download</a>

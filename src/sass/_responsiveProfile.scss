@@ -7,6 +7,16 @@
         }
     }
 }
+@media screen and (max-width: 1024px) and (max-height: 1366px) {
+    .content {
+        margin-top: 15rem;
+    }
+}
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+    .content {
+        margin-top: 5rem;
+    }
+}
 
 
 @media screen and (max-width: 480px) {
