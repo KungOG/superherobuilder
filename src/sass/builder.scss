@@ -287,6 +287,19 @@
   
   .build {
     margin-top: 5rem;
+
+    .build-page-content-2-img-selector {
+
+      &.left {
+        margin-left: 2rem !important;
+        margin-right: -1rem !important;
+      }
+
+      &.right {
+        margin-left: -1rem !important;
+      }
+      
+    }
   }
 }
 

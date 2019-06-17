@@ -58,7 +58,7 @@
       <div class="build-page-content-2-img-container">
         <div v-show="femaleOrMale == 'm'" class="build-page-content-2-img-body-seperator">
           <a
-            class="build-page-content-2-img-selector"
+            class="build-page-content-2-img-selector left"
             @click="hBackForward = 1, headImgScroller()"
           >&#60;</a>
           <img
@@ -83,14 +83,14 @@
             alt
           >
           <a
-            class="build-page-content-2-img-selector"
+            class="build-page-content-2-img-selector right"
             @click="hBackForward = 2, headImgScroller()"
           >&gt;</a>
         </div>
 
         <div v-show="femaleOrMale == 'm'" class="build-page-content-2-img-body-seperator">
           <a
-            class="build-page-content-2-img-selector"
+            class="build-page-content-2-img-selector left"
             @click="bBackForward = 1, bodyImgScroller()"
           >&#60;</a>
           <img
@@ -115,14 +115,14 @@
             alt
           >
           <a
-            class="build-page-content-2-img-selector"
+            class="build-page-content-2-img-selector right"
             @click="bBackForward = 2, bodyImgScroller()"
           >&gt;</a>
         </div>
 
         <div v-show="femaleOrMale == 'm'" class="build-page-content-2-img-body-seperator">
           <a
-            class="build-page-content-2-img-selector"
+            class="build-page-content-2-img-selector left"
             @click="lBackForward = 1, legImgScroller()"
           >&#60;</a>
           <img
@@ -147,14 +147,14 @@
             alt
           >
           <a
-            class="build-page-content-2-img-selector"
+            class="build-page-content-2-img-selector right"
             @click="lBackForward = 2, legImgScroller()"
           >&gt;</a>
         </div>
 
         <div v-show="femaleOrMale == 'f'" class="build-page-content-2-img-body-seperator">
           <a
-            class="build-page-content-2-img-selector"
+            class="build-page-content-2-img-selector left"
             @click="hBackForward = 1, headImgScroller()"
           >&#60;</a>
           <img
@@ -179,14 +179,14 @@
             alt
           >
           <a
-            class="build-page-content-2-img-selector"
+            class="build-page-content-2-img-selector right"
             @click="hBackForward = 2, headImgScroller()"
           >&gt;</a>
         </div>
 
         <div v-show="femaleOrMale == 'f'" class="build-page-content-2-img-body-seperator">
           <a
-            class="build-page-content-2-img-selector"
+            class="build-page-content-2-img-selector left"
             @click="bBackForward = 1, bodyImgScroller()"
           >&#60;</a>
           <img
@@ -211,14 +211,14 @@
             alt
           >
           <a
-            class="build-page-content-2-img-selector"
+            class="build-page-content-2-img-selector right"
             @click="bBackForward = 2, bodyImgScroller()"
           >&gt;</a>
         </div>
 
         <div v-show="femaleOrMale == 'f'" class="build-page-content-2-img-body-seperator">
           <a
-            class="build-page-content-2-img-selector"
+            class="build-page-content-2-img-selector left"
             @click="lBackForward = 1, legImgScroller()"
           >&#60;</a>
           <img
@@ -243,7 +243,7 @@
             alt
           >
           <a
-            class="build-page-content-2-img-selector"
+            class="build-page-content-2-img-selector right"
             @click="lBackForward = 2, legImgScroller()"
           >&gt;</a>
         </div>
