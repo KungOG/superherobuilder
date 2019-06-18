@@ -285,9 +285,13 @@
       }
     }
   }
+  
+  .builder-pad-btn {
+    display: none;
+  }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-height: 1024px) and (max-width: 800px) {
   
   .build {
     margin: 0;
@@ -317,7 +321,7 @@
   }
 
 
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 830px) and (max-height: 1024){
 
   .build {
     margin: 0;
@@ -336,11 +340,6 @@
       margin-bottom: 1.5rem;
     }
     
-    .builder-pad-btn {
-      display: unset !important;
-      margin: auto;
-
-    }
   }
 }
 
@@ -348,13 +347,7 @@
   .build {
     margin-top: 2rem;
     
-    .builder-web-btn {
-      display: none;
-    }
-    
-    .builder-pad-btn {
-      display: unset;
-    }
+
   }
 }
 
