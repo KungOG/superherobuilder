@@ -31,7 +31,7 @@
       </div>
       <div class="build-page-content-mobile-content-body">
           <div v-show="femaleOrMale == 'm'" class="build-page-content-mobile-content-body-img-seperator">
-          <a class="build-page-content-mobile-content-body-selector" @click="hBackForward = 1, headImgScroller()">&#60;</a>
+          <a class="build-page-content-mobile-content-body-selector left" @click="hBackForward = 1, headImgScroller()">&#60;</a>
           <img v-show="hImgNumber == 1" class="build-page-content-mobile-content-body-img head" :style="{width: hWidth, height: headHeight}" src="../assets/img/h1.png">
           <img
             v-show="hImgNumber == 2"
@@ -46,14 +46,14 @@
             src="../assets/img/h3.png"
           >
           <a
-            class="build-page-content-mobile-content-body-selector"
+            class="build-page-content-mobile-content-body-selector right"
             @click="hBackForward = 2, headImgScroller()"
           >&#10095;</a>
         </div>
 
         <div v-show="femaleOrMale == 'm'" class="build-page-content-mobile-content-body-img-seperator">
           <a
-            class="build-page-content-mobile-content-body-selector"
+            class="build-page-content-mobile-content-body-selector left"
             @click="bBackForward = 1, bodyImgScroller()"
           >&#10094;</a>
           <img
@@ -78,14 +78,14 @@
             alt
           >
           <a
-            class="build-page-content-mobile-content-body-selector"
+            class="build-page-content-mobile-content-body-selector right"
             @click="bBackForward = 2, bodyImgScroller()"
           >&#10095;</a>
         </div>
 
         <div v-show="femaleOrMale == 'm'" class="build-page-content-mobile-content-body-img-seperator leg">
           <a
-            class="build-page-content-mobile-content-body-selector"
+            class="build-page-content-mobile-content-body-selector left"
             @click="lBackForward = 1, legImgScroller()"
           >&#10094;</a>
           <img
@@ -110,14 +110,14 @@
             alt
           >
           <a
-            class="build-page-content-mobile-content-body-selector"
+            class="build-page-content-mobile-content-body-selector right"
             @click="lBackForward = 2, legImgScroller()"
           >&#10095;</a>
         </div>
 
         <div v-show="femaleOrMale == 'f'" class="build-page-content-mobile-content-body-img-seperator">
           <a
-            class="build-page-content-mobile-content-body-selector right"
+            class="build-page-content-mobile-content-body-selector left"
             @click="hBackForward = 1, headImgScroller()"
           >&#10094;</a>
           <img

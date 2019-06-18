@@ -48,7 +48,7 @@
         >
       </div>
         <router-link to="/power">
-          <a @click="bodyChosen()" class="btn">
+          <a @click="bodyChosen()" class="btn builder-web-btn">
             Step two
             <span>&gt;</span>
           </a>
@@ -249,6 +249,12 @@
         </div>
       </div>
     </section>
+      <router-link to="/power">
+          <a @click="bodyChosen()" class="btn builder-pad-btn">
+            Step two
+            <span>&gt;</span>
+          </a>
+        </router-link>
   </main>
 </template>
 

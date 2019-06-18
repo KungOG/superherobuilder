@@ -117,6 +117,10 @@
         }
       }
     }
+
+    .builder-pad-btn {
+      display: none;
+    }
   }
 
   //Mobile
@@ -277,7 +281,7 @@
         left: 0;
         border-radius: 0;
         margin: 0;
-        padding: 2rem 0;
+        padding: 1rem 0;
       }
     }
   }
@@ -286,19 +290,56 @@
 @media only screen and (max-width: 1024px) {
   
   .build {
-    margin-top: 5rem;
+    margin: 0;
+    flex-direction: column;
 
-    .build-page-content-2-img-selector {
+    .build-page-content-1 .build-page-content-1-div {
+      margin: 1rem;
+    }
 
-      &.left {
-        margin-left: 2rem !important;
-        margin-right: -1rem !important;
-      }
 
-      &.right {
-        margin-left: -1rem !important;
-      }
-      
+    .builder-web-btn {
+      display: none !important;
+    }
+
+    .build-page-content-2 {
+      margin-bottom: 1.5rem;
+    }
+    
+    .builder-pad-btn {
+      display: unset !important;
+      margin: auto;
+
+    }
+  }
+    
+
+  }
+
+
+@media only screen and (max-width: 830px) {
+
+  .build {
+    margin: 0;
+    flex-direction: column;
+
+    .build-page-content-1 .build-page-content-1-div {
+      margin: 1rem;
+    }
+
+
+    .builder-web-btn {
+      display: none !important;
+    }
+
+    .build-page-content-2 {
+      margin-bottom: 1.5rem;
+    }
+    
+    .builder-pad-btn {
+      display: unset !important;
+      margin: auto;
+
     }
   }
 }
@@ -306,6 +347,14 @@
 @media only screen and (max-height: 830px) {
   .build {
     margin-top: 2rem;
+    
+    .builder-web-btn {
+      display: none;
+    }
+    
+    .builder-pad-btn {
+      display: unset;
+    }
   }
 }
 
@@ -324,4 +373,34 @@
       padding: 1rem !important; 
     }
   }
+}
+
+@media only screen and (max-width: 375px) {
+
+  #app {
+    width: 100vw;
+  }
+
+  // .build-page-content-mobile-content-size {
+  //   padding: 0 !important;
+  //   margin: 0 0 0 -1.5rem !important;
+
+  //   .build-page-content-mobile-content-size-body {
+  //     margin-left: -1rem;
+  //   }
+  // }
+  // .build-page-content-mobile-content-body {
+  //   width: 11rem !important;
+  //   margin: 0 .1rem !important;
+
+  //   .build-page-content-mobile-content-body-selector {
+  //     &.left {
+  //       margin-right: -1rem;
+  //     }
+  //     &.right {
+  //       margin-left: -1rem;
+  //     }
+  //   }
+  // }
+  
 }
