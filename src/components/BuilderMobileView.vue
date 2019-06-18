@@ -31,7 +31,7 @@
       </div>
       <div class="build-page-content-mobile-content-body">
           <div v-show="femaleOrMale == 'm'" class="build-page-content-mobile-content-body-img-seperator">
-          <a class="build-page-content-mobile-content-body-selector left" @click="hBackForward = 1, headImgScroller()">&#60;</a>
+          <a class="build-page-content-mobile-content-body-selector left" @click="hBackForward = 1, headImgScroller()">&#10095;</a>
           <img v-show="hImgNumber == 1" class="build-page-content-mobile-content-body-img head" :style="{width: hWidth, height: headHeight}" src="../assets/img/h1.png">
           <img
             v-show="hImgNumber == 2"
