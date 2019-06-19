@@ -281,7 +281,8 @@ export default {
     };
   },
 
-  computed: {},
+  computed: {
+  },
 
   methods: {
     headImgScroller() {

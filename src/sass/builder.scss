@@ -110,6 +110,15 @@
           padding: 0;
           margin: 0;
           cursor: pointer;
+
+          &.left {
+              margin-right: -3rem;
+              margin-left: 3rem;
+          }
+          &.right {
+              margin-right: 3rem;
+              margin-left: -3rem;
+          }
         }
 
         .build-page-content-2-img {
